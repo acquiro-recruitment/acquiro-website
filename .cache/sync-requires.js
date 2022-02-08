@@ -10,7 +10,7 @@ exports.components = {
   "component---src-pages-blog-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/blog.js")),
   "component---src-pages-contact-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/contact.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/index.js")),
-  "component---src-pages-move-to-sweden-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/move-to-sweden.js")),
+  "component---src-pages-sign-up-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/sign-up.js")),
   "component---src-templates-blog-post-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/templates/blog-post.js"))
 }
 

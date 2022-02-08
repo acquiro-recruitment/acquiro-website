@@ -1,7 +1,7 @@
 import "@fontsource/inter/variable.css"
 
 // normalize CSS across browsers
-import "./src/css/normalize.css"
+import "./src/styles/normalize.css"
 
 // custom CSS styles
-import "./src/css/style.css"
+import "./src/styles/style.css"

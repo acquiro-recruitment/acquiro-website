@@ -1,31 +1,44 @@
+import React from "react"
 import styled from "styled-components"
 
-const Bio = ({ author }) => {
+export default ({ author }) => {
   const avatarUrl =
     author?.name === "Acquiro International Recruitment"
       ? null
       : author?.avatar?.url
 
   return (
-    <Container>
-      {avatarUrl && (
-        <img alt={author?.name || ``} className="bio-avatar" src={avatarUrl} />
-      )}
+    <Bio>
+      {avatarUrl && <Avatar src={avatarUrl} alt={author?.name || ``} />}
       {author?.name && (
         <div>
-          <strong>{author.name}</strong>
-          <br />
-          {author?.description || null}
+          <BioName>{author.name}</BioName>
+          <BioRole>{author?.description || null}</BioRole>
         </div>
       )}
-    </Container>
+    </Bio>
   )
 }
 
-const Container = styled.div`
+const Bio = styled.div`
   display: flex;
   align-items: center;
-  padding: 2.5rem 0 6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `
 
-export default Bio
+const Avatar = styled.img`
+  max-width: 4rem;
+  margin-right: 1.25rem;
+  height: auto;
+  border-radius: 100%;
+`
+
+const BioName = styled.div`
+  font-size: 1.25rem;
+  font-weight: 600;
+`
+
+const BioRole = styled.div`
+  font-size: 1.1rem;
+`

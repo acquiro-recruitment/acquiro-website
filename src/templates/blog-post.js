@@ -1,13 +1,14 @@
+import React from "react"
+import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import parse from "html-react-parser"
-
-import "../css/@wordpress/block-library/build-style/style.css"
-import "../css/@wordpress/block-library/build-style/theme.css"
-
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+import "../styles/@wordpress/block-library/build-style/style.css"
+import "../styles/@wordpress/block-library/build-style/theme.css"
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   const featuredImage = {
@@ -25,9 +26,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{parse(post.title)}</h1>
-
-          <p>{post.date}</p>
+          <PostHeading>{parse(post.title)}</PostHeading>
 
           {/* if we have a featured image for this post let's display it */}
           {featuredImage?.data && (
@@ -40,44 +39,32 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         </header>
 
         {!!post.content && (
-          <section itemProp="articleBody">{parse(post.content)}</section>
+          <PostContainer>
+            <section itemProp="articleBody">{parse(post.content)}</section>
+            <Bio author={post.author.node} />
+          </PostContainer>
         )}
-
-        <Bio author={post.author.node} />
       </article>
 
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.uri} rel="prev">
-                ← {parse(previous.title)}
-              </Link>
-            )}
-          </li>
-
-          <li>
-            {next && (
-              <Link to={next.uri} rel="next">
-                {parse(next.title)} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      <PostNav>
+        <div>
+          {previous && (
+            <Link to={previous.uri} rel="prev">
+              ← {parse(previous.title)}
+            </Link>
+          )}
+        </div>
+        <div>
+          {next && (
+            <Link to={next.uri} rel="next">
+              {parse(next.title)} →
+            </Link>
+          )}
+        </div>
+      </PostNav>
     </Layout>
   )
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostById(
@@ -111,7 +98,7 @@ export const pageQuery = graphql`
             childImageSharp {
               gatsbyImageData(
                 quality: 100
-                placeholder: TRACED_SVG
+                placeholder: NONE
                 layout: FULL_WIDTH
               )
             }
@@ -129,3 +116,41 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const PostContainer = styled.div`
+  /* max-width: 800px;
+  margin: 0 auto; */
+`
+
+const PostHeading = styled.h1`
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.8px;
+  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    /* width: 720px; */
+    margin-bottom: 38px;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.8px;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    /* width: auto; */
+    margin-bottom: 64px;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2px;
+  }
+`
+
+const PostNav = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+`
+
+export default BlogPostTemplate

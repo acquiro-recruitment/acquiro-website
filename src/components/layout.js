@@ -1,16 +1,24 @@
+import React from "react"
+import styled, { ThemeProvider } from "styled-components"
+import theme from "../styles/theme"
 import Header from "./header"
 import Footer from "./footer"
 
-const Layout = ({ isHomePage, children }) => {
+export default ({ children }) => {
   return (
-    <div className="global-wrapper" data-is-root-path={isHomePage}>
-      <Header />
-
-      <main>{children}</main>
-
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Header />
+        <main>{children}</main>
+      </Wrapper>
       <Footer />
-    </div>
+    </ThemeProvider>
   )
 }
 
-export default Layout
+const Wrapper = styled.div`
+  margin: 0 auto;
+  max-width: ${({ theme }) => theme.layout.wrapper};
+  padding-right: 2rem;
+  padding-left: 2rem;
+`

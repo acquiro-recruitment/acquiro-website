@@ -1,9 +1,9 @@
+import React from "react"
+import styled from "styled-components"
 import { Link, graphql } from "gatsby"
-import parse from "html-react-parser"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostCard from "../components/post-card"
 
 const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   const posts = data.allWpPost.nodes
@@ -23,34 +23,13 @@ const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
 
   return (
     <Layout>
-      <Seo title="All posts" />
+      {/* <Seo title="All posts" /> */}
 
-      <Bio />
-
-      <ol style={{ listStyle: `none` }}>
-        {posts.map((post) => {
-          const title = post.title
-
-          return (
-            <li key={post.uri}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.uri} itemProp="url">
-                      <span itemProp="headline">{parse(title)}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.date}</small>
-                </header>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <Posts>
+        {posts.map((post) => (
+          <PostCard post={post} key={post.uri} />
+        ))}
+      </Posts>
 
       {previousPagePath && (
         <>
@@ -71,10 +50,43 @@ export const pageQuery = graphql`
       nodes {
         excerpt
         uri
-        date(formatString: "MMMM DD, YYYY")
         title
-        excerpt
+        isSticky
+        author {
+          node {
+            name
+            username
+            description
+            avatar {
+              default
+              forceDefault
+              foundAvatar
+              url
+            }
+          }
+        }
+        featuredImage {
+          node {
+            altText
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  quality: 100
+                  placeholder: NONE
+                  layout: FULL_WIDTH
+                )
+              }
+            }
+          }
+        }
       }
     }
   }
+`
+
+const Posts = styled.div`
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem;
 `
