@@ -5,74 +5,99 @@ import Layout from "../components/layout"
 import theme from "../styles/theme"
 import Seo from "../components/seo"
 
+import { Reveal } from "react-awesome-reveal"
+import { keyframes } from "@emotion/react"
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
 const Contact = () => {
   return (
     <Layout>
       {/* <Seo title="All posts" /> */}
       <Wrapper>
-        <Heading>Get in touch</Heading>
+        <Reveal keyframes={fadeIn} triggerOnce>
+          <Heading>Get in touch</Heading>
+        </Reveal>
 
-        <SubHeading>
-          Contact us if you'd like to talk about new opporunities, current
-          challenges or just get a coffee. The inbox is open.
-        </SubHeading>
+        <Reveal keyframes={fadeIn} delay={200} triggerOnce>
+          <SubHeading>
+            Contact us if you'd like to talk about new opporunities, current
+            challenges or just get a coffee. The inbox is open.
+          </SubHeading>
+        </Reveal>
 
         <Headshots>
-          <Headshot>
-            <Image>
-              <StaticImage src="../images/lina.jpeg" alt="lina" />
-            </Image>
-            <Text>
-              <span>Lina Sahlberg</span>
-              Managing Partner
-              <br />
-              lina.sahlberg@acquirorecruitment.com
-              <br />
-              +46 (0) 707 13 15 23
-            </Text>
-          </Headshot>
+          <Reveal keyframes={fadeIn} delay={400} triggerOnce>
+            <Headshot>
+              <Image>
+                <StaticImage src="../images/lina.jpeg" alt="lina" />
+              </Image>
+              <Text>
+                <span>Lina Sahlberg</span>
+                Managing Partner
+                <br />
+                lina.sahlberg@acquirorecruitment.com
+                <br />
+                +46 (0) 707 13 15 23
+              </Text>
+            </Headshot>
+          </Reveal>
 
-          <Headshot>
-            <Image>
-              <StaticImage src="../images/elias.png" alt="elias" />
-            </Image>
-            <Text>
-              <span>Elias Danger</span>
-              Recruiting Consultant
-              <br />
-              elias.danger@acquirorecruitment.com
-              <br />
-              +46 (0) 708 11 55 87
-            </Text>
-          </Headshot>
+          <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+            <Headshot>
+              <Image>
+                <StaticImage src="../images/elias.png" alt="elias" />
+              </Image>
+              <Text>
+                <span>Elias Danger</span>
+                Recruiting Consultant
+                <br />
+                elias.danger@acquirorecruitment.com
+                <br />
+                +46 (0) 708 11 55 87
+              </Text>
+            </Headshot>
+          </Reveal>
         </Headshots>
 
-        <Info>
-          <Address>
-            <InfoHeading>Visiting Address</InfoHeading>
-            <InfoText>
-              Acquiro International Recruitment
-              <br />
-              STUDIO, Nordenskiöldsgatan 24
-              <br />
-              211 19, Malmö
-              <br />
-              Sweden
-            </InfoText>
-          </Address>
+        <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+          <Info>
+            <Address>
+              <InfoHeading>Visiting Address</InfoHeading>
+              <InfoText>
+                Acquiro International Recruitment
+                <br />
+                STUDIO, Nordenskiöldsgatan 24
+                <br />
+                211 19, Malmö
+                <br />
+                Sweden
+              </InfoText>
+            </Address>
 
-          <div>
             <div>
-              <InfoHeading>Email Address</InfoHeading>
-              <InfoText>info@acquirorecruitment.com</InfoText>
-            </div>
+              <div>
+                <InfoHeading>Email Address</InfoHeading>
+                <InfoText>info@acquirorecruitment.com</InfoText>
+              </div>
 
-            <Phone>
-              <InfoHeading>Telephone</InfoHeading>
-              <InfoText>+46 (0) 707 13 15 23</InfoText>
-            </Phone>
-          </div>
-        </Info>
+              <Phone>
+                <InfoHeading>Telephone</InfoHeading>
+                <InfoText>+46 (0) 707 13 15 23</InfoText>
+              </Phone>
+            </div>
+          </Info>
+        </Reveal>
       </Wrapper>
     </Layout>
   )

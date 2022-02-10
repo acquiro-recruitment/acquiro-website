@@ -4,22 +4,39 @@ import { StaticImage } from "gatsby-plugin-image"
 import Heart from "../icons/heart"
 import Quotation from "../icons/quotation"
 
+import { Reveal } from "react-awesome-reveal"
+import { keyframes } from "@emotion/react"
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
 export default () => (
-  <Testimonial>
-    <StyledHeart />
-    <StyledQuotation />
-    <Headshot>
-      <StaticImage src="../images/testimonial.jpg" alt="testimonial" />
-    </Headshot>
-    <Name>Kevin Ivan</Name>
-    <Client>Senior Software Engineer</Client>
-    <Quote>
-      Acquiro Recruitment is an incredible group of individuals that helped me
-      find my dream job. Dolor sit amet consectetur, adipisicing elit. Vero
-      commodi repudiandae id corrupti, amet non cumque consequuntur quis at
-      deleniti sit amet!
-    </Quote>
-  </Testimonial>
+  <Reveal keyframes={fadeIn} fraction={1} triggerOnce>
+    <Testimonial>
+      <StyledHeart />
+      <StyledQuotation />
+      <Headshot>
+        <StaticImage src="../images/testimonial.jpg" alt="testimonial" />
+      </Headshot>
+      <Name>Kevin Ivan</Name>
+      <Client>Senior Software Engineer</Client>
+      <Quote>
+        Acquiro Recruitment is an incredible group of individuals that helped me
+        find my dream job. Dolor sit amet consectetur, adipisicing elit. Vero
+        commodi repudiandae id corrupti, amet non cumque consequuntur quis at
+        deleniti sit amet!
+      </Quote>
+    </Testimonial>
+  </Reveal>
 )
 
 const Testimonial = styled.div`
@@ -27,7 +44,7 @@ const Testimonial = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 14rem auto 0;
+  margin: 18rem auto 0;
   padding: 3.5rem 2rem;
   box-shadow: 0 35px 100px 0 rgba(31, 2, 89, 0.1);
   border-radius: 0.25rem;

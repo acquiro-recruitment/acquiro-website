@@ -7,9 +7,35 @@ import theme from "../styles/theme"
 import Button from "../components/button"
 import Globe from "../images/globe.svg"
 
+import { Reveal } from "react-awesome-reveal"
+import { keyframes } from "@emotion/react"
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
 const About = () => {
-  const recruitments = useSpring({ val: 100, from: { val: 50 } })
-  const years = useSpring({ val: 7, from: { val: 1 } })
+  const recruitments = useSpring({
+    val: 90,
+    from: { val: 60 },
+    delay: 600,
+    config: { tension: 50, friction: 10 },
+  })
+
+  const years = useSpring({
+    val: 8,
+    from: { val: 1 },
+    delay: 1000,
+    config: { tension: 50, friction: 10 },
+  })
 
   return (
     <Layout>
@@ -17,55 +43,62 @@ const About = () => {
       <Container>
         <Info>
           <Text>
-            <p>
-              Acquiro is a digital recruitment agency focusing on international
-              specialist and tech recruitment. We have 8 years' experience of
-              international recruitment for global Scandinavian companies from
-              almost all parts of the world.
-            </p>
-            <p>
-              When you create a diverse team, no matter how big or small,
-              bridges are built between people and perceptions. And bridges
-              create new opportunities. And new opportunities create growth.
-            </p>
-            <p>
-              When we recruit a great candidate for a key position it is the
-              starting point of a chain reaction. The company and the customers
-              will profit. The team and the people close to them will prosper.
-              Eventually the business will grow and new bridges will be built.
-            </p>
-            <p>That's really what it's all about.</p>
+            <Reveal keyframes={fadeIn} triggerOnce cascade duration={600}>
+              <p>
+                Acquiro is a digital recruitment agency focusing on
+                international specialist and tech recruitment. We have 8 years'
+                experience of international recruitment for global Scandinavian
+                companies from almost all parts of the world.
+              </p>
+              <p>
+                When you create a diverse team, no matter how big or small,
+                bridges are built between people and perceptions. And bridges
+                create new opportunities. And new opportunities create growth.
+              </p>
+              <p>
+                When we recruit a great candidate for a key position it is the
+                starting point of a chain reaction. The company and the
+                customers will profit. The team and the people close to them
+                will prosper. Eventually the business will grow and new bridges
+                will be built.
+              </p>
+            </Reveal>
           </Text>
 
-          <Button dark href="/sign-up">
-            Sign up now
-          </Button>
+          <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+            <Button dark href="/sign-up">
+              Sign up now
+            </Button>
+          </Reveal>
         </Info>
 
         <NumbersWrapper>
-          <Numbers>
-            {/* <animated.h1>
-              {recruitments.val.interpolate((val) => Math.floor(val))}
-            </animated.h1> */}
-            <h1>70+</h1>
-            <Description>
-              recruited
-              <br />
-              candidates
-            </Description>
-          </Numbers>
+          <Reveal keyframes={fadeIn} delay={400} triggerOnce>
+            <Numbers>
+              <animated.h1>
+                {recruitments.val.interpolate((val) => Math.floor(val))}
+              </animated.h1>
+              <h1>+</h1>
+              <Description>
+                recruited
+                <br />
+                candidates
+              </Description>
+            </Numbers>
+          </Reveal>
 
-          <Numbers>
-            {/* <animated.h1>
-              {years.val.interpolate((val) => Math.floor(val))}
-            </animated.h1> */}
-            <h1>8</h1>
-            <Description>
-              years
-              <br />
-              in business
-            </Description>
-          </Numbers>
+          <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+            <Numbers marginTop>
+              <animated.h1>
+                {years.val.interpolate((val) => Math.floor(val))}
+              </animated.h1>
+              <Description>
+                years
+                <br />
+                in business
+              </Description>
+            </Numbers>
+          </Reveal>
 
           <GlobeContainer>
             <StyledGlobe />
@@ -93,17 +126,19 @@ const NumbersWrapper = styled.div`
 
 const Numbers = styled.div`
   text-align: right;
+  margin-top: ${({ marginTop }) => (marginTop ? "4rem" : 0)};
   h1 {
+    display: inline-block;
     margin: 0;
     font-size: 5rem;
   }
-
   & + & {
     margin-top: 4rem;
   }
 `
 
 const Description = styled.span`
+  display: block;
   font-size: 20px;
   letter-spacing: -0.87px;
   line-height: 30px;
@@ -117,6 +152,7 @@ const GlobeContainer = styled.div`
   right: 1rem;
   width: 600px;
   z-index: -1;
+  opacity: 0.75;
 `
 
 const StyledGlobe = styled(Globe)`

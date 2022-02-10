@@ -4,12 +4,25 @@ import Flex from "../icons/flex"
 import Relocation from "../icons/relocation"
 import Growth from "../icons/growth"
 
-import { Fade } from "react-awesome-reveal"
+import { Reveal } from "react-awesome-reveal"
+import { keyframes } from "@emotion/react"
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 75px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
 
 export default () => (
   <Process>
     <Steps>
-      <Fade delay={200} direction="up" triggerOnce>
+      <Reveal delay={200} fraction={1} keyframes={fadeIn} triggerOnce>
         <Step>
           <StepIcon className="icon-flex">
             <Flex />
@@ -20,9 +33,9 @@ export default () => (
             harum ad quae officia expedita!
           </Text>
         </Step>
-      </Fade>
+      </Reveal>
 
-      <Fade delay={400} direction="up" triggerOnce>
+      <Reveal delay={400} fraction={1} keyframes={fadeIn} triggerOnce>
         <Step>
           <StepIcon className="icon-relocation">
             <Relocation />
@@ -33,9 +46,9 @@ export default () => (
             harum ad quae officia expedita!
           </Text>
         </Step>
-      </Fade>
+      </Reveal>
 
-      <Fade delay={600} direction="up" triggerOnce>
+      <Reveal delay={600} fraction={1} keyframes={fadeIn} triggerOnce>
         <Step>
           <StepIcon className="icon-growth">
             <Growth />
@@ -46,14 +59,14 @@ export default () => (
             Aliquid harum ad quae officia expedita!
           </Text>
         </Step>
-      </Fade>
+      </Reveal>
     </Steps>
   </Process>
 )
 
 const Process = styled.div`
   position: relative;
-  padding-top: 6rem;
+  padding-top: 16rem;
 `
 
 const Heading = styled.h1`

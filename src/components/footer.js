@@ -4,6 +4,44 @@ import styled, { css } from "styled-components"
 import LinkedIn from "../icons/linkedin"
 import Instagram from "../icons/instagram"
 
+export default ({ light }) => {
+  const getYear = () => new Date().getFullYear()
+
+  return (
+    <Footer light={light}>
+      <Container>
+        <FooterContent>
+          <Copyright>Acquiro © Copyright {getYear()}</Copyright>
+          <ContactLink to="/sign-up" light={light}>
+            {/* <span>Do you have any questions?</span> */}
+            <span>Let's start a conversation.</span>
+            {/* Contact us */}
+            Sign up now
+            <svg viewBox="0 0 19 13">
+              <path
+                d="M12.484 12.676c.206 0 .396-.039.57-.117.174-.078.346-.206.517-.384l4.22-4.38c.185-.199.325-.38.421-.543.096-.164.144-.356.144-.576 0-.22-.048-.41-.144-.57a3.37 3.37 0 00-.421-.538l-4.22-4.391a1.693 1.693 0 00-.517-.384 1.376 1.376 0 00-.57-.117c-.17 0-.336.034-.496.101-.16.068-.304.158-.431.272-.128.114-.231.247-.31.4a1.072 1.072 0 00-.117.495c0 .22.04.414.118.581.078.167.206.343.383.528l2.142 2.206H1.86c-.484 0-.86.126-1.13.378-.27.252-.405.599-.405 1.04 0 .44.135.786.405 1.038s.646.379 1.13.379h11.914L11.631 10.3a1.986 1.986 0 00-.383.532c-.079.17-.118.366-.118.587 0 .17.04.332.118.484.078.153.18.286.309.4.127.114.271.204.431.272.16.067.325.101.496.101z"
+                fill="currentColor"
+                fillRule="nonzero"
+              />
+            </svg>
+          </ContactLink>
+          <Icons light={light}>
+            <Icon
+              href="https://linkedin.com/company/youxventures/"
+              target="_blank"
+            >
+              <LinkedIn />
+            </Icon>
+            <Icon href="https://instagram.com/youxventures/" target="_blank">
+              <Instagram />
+            </Icon>
+          </Icons>
+        </FooterContent>
+      </Container>
+    </Footer>
+  )
+}
+
 const Footer = styled.footer`
   position: relative;
   display: flex;
@@ -20,6 +58,11 @@ const Footer = styled.footer`
     padding-bottom: 0;
     min-height: 400px;
   }
+`
+
+const Container = styled.div`
+  width: ${({ theme }) => theme.layout.wrapper};
+  margin: 0 auto;
 `
 
 const FooterContent = styled.div`
@@ -47,7 +90,7 @@ const Copyright = styled.div`
     order: 0;
     width: 280px;
     margin-top: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `
 
@@ -63,15 +106,11 @@ const Icons = styled.div`
 `
 
 const Icon = styled.a`
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   color: inherit;
-  .LinkedIn,
-  .Unsplash {
-    width: 14px;
-  }
   & + & {
-    margin-left: 34px;
+    margin-left: 40px;
   }
   &:visited,
   &:hover {
@@ -122,46 +161,3 @@ const ContactLink = styled(Link)`
     }
   }
 `
-
-const Container = styled.div`
-  width: ${({ theme }) => theme.layout.wrapper};
-  margin: 0 auto;
-`
-
-export default ({ light }) => {
-  const getYear = () => new Date().getFullYear()
-
-  return (
-    <Footer light={light}>
-      <Container>
-        <FooterContent>
-          <Copyright>Acquiro © Copyright {getYear()}</Copyright>
-
-          <ContactLink to="/sign-up" light={light}>
-            <span>Let's start a conversation.</span>
-            Get in touch
-            <svg viewBox="0 0 19 13">
-              <path
-                d="M12.484 12.676c.206 0 .396-.039.57-.117.174-.078.346-.206.517-.384l4.22-4.38c.185-.199.325-.38.421-.543.096-.164.144-.356.144-.576 0-.22-.048-.41-.144-.57a3.37 3.37 0 00-.421-.538l-4.22-4.391a1.693 1.693 0 00-.517-.384 1.376 1.376 0 00-.57-.117c-.17 0-.336.034-.496.101-.16.068-.304.158-.431.272-.128.114-.231.247-.31.4a1.072 1.072 0 00-.117.495c0 .22.04.414.118.581.078.167.206.343.383.528l2.142 2.206H1.86c-.484 0-.86.126-1.13.378-.27.252-.405.599-.405 1.04 0 .44.135.786.405 1.038s.646.379 1.13.379h11.914L11.631 10.3a1.986 1.986 0 00-.383.532c-.079.17-.118.366-.118.587 0 .17.04.332.118.484.078.153.18.286.309.4.127.114.271.204.431.272.16.067.325.101.496.101z"
-                fill="currentColor"
-                fillRule="nonzero"
-              />
-            </svg>
-          </ContactLink>
-
-          <Icons light={light}>
-            <Icon
-              href="https://linkedin.com/company/youxventures/"
-              target="_blank"
-            >
-              <LinkedIn />
-            </Icon>
-            <Icon href="https://instagram.com/youxventures/" target="_blank">
-              <Instagram />
-            </Icon>
-          </Icons>
-        </FooterContent>
-      </Container>
-    </Footer>
-  )
-}

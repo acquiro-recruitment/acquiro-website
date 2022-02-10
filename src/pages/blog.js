@@ -5,6 +5,21 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostCard from "../components/post-card"
 
+import { Reveal } from "react-awesome-reveal"
+import { keyframes } from "@emotion/react"
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`
+
 const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   const posts = data.allWpPost.nodes
 
@@ -25,11 +40,13 @@ const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
     <Layout>
       {/* <Seo title="All posts" /> */}
 
-      <Posts>
-        {posts.map((post) => (
-          <PostCard post={post} key={post.uri} />
-        ))}
-      </Posts>
+      <Reveal keyframes={fadeIn} triggerOnce>
+        <Posts>
+          {posts.map((post) => (
+            <PostCard post={post} key={post.uri} />
+          ))}
+        </Posts>
+      </Reveal>
 
       {previousPagePath && (
         <>
