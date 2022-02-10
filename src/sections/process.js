@@ -10,7 +10,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 75px, 0);
+    transform: translate3d(0, 4.6875rem, 0);
   }
 
   to {
@@ -86,24 +86,24 @@ const Steps = styled.div`
 const Step = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 18.75;
   text-align: center;
 `
 
 const StepIcon = styled.div`
-  width: 60px;
+  width: 3.75rem;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.primary};
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 100px;
+    width: 6.25rem;
     &.icon-flex {
-      width: 80px;
+      width: 5rem;
     }
     &.icon-relocation {
-      width: 80px;
+      width: 5rem;
     }
     &.icon-growth {
-      width: 80px;
+      width: 5rem;
     }
   }
 `

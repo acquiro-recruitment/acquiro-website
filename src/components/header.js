@@ -42,7 +42,7 @@ const Header = styled.header`
 
 const LogoWrapper = styled(PartlyActiveLink)`
   display: block;
-  width: 140px;
+  width: 8.75rem;
 `
 
 const Nav = styled.nav`

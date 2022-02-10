@@ -10,7 +10,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -46,11 +46,11 @@ const Testimonial = styled.div`
   justify-content: center;
   margin: 18rem auto 0;
   padding: 3.5rem 2rem;
-  box-shadow: 0 35px 100px 0 rgba(31, 2, 89, 0.1);
+  box-shadow: 0 2.1875rem 6.25rem 0 rgba(31, 2, 89, 0.1);
   border-radius: 0.25rem;
   text-align: center;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 600px;
+    width: 37.5rem;
     padding: 3.5rem 0;
     border-radius: 1rem;
   }
@@ -61,14 +61,14 @@ const Headshot = styled.div`
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  border: 5px solid ${({ theme }) => theme.colors.primary};
+  border: 0.3125 solid ${({ theme }) => theme.colors.primary};
   overflow: hidden;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 94px;
-    height: 94px;
+    width: 5.875rem;
+    height: 5.875rem;
   }
 `
 
@@ -87,7 +87,7 @@ const Client = styled.div`
 `
 
 const Quote = styled.div`
-  max-width: 450px;
+  max-width: 28.125rem;
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;

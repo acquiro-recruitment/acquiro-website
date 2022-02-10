@@ -9,7 +9,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -96,14 +96,14 @@ const BlogPosts = styled.div`
 const BlogPost = styled(Link)`
   display: flex;
   flex-direction: column;
-  max-width: 420px;
+  max-width: 26.25rem;
   width: 100%;
   cursor: pointer;
   & + & {
     margin-top: 2rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    max-width: 360px;
+    max-width: 22.5rem;
     & + & {
       margin-top: 0;
     }
@@ -152,7 +152,7 @@ const BlogButton = styled(Link)`
   color: ${({ theme }) => theme.colors.black};
   letter-spacing: 0.02em;
   svg {
-    margin-left: 16px;
+    margin-left: 1rem;
     transition: transform 0.2s ease-in-out;
   }
   &:hover {
@@ -163,9 +163,9 @@ const BlogButton = styled(Link)`
     content: "";
     position: absolute;
     top: 50%;
-    right: -32px;
-    width: 80px;
-    height: 80px;
+    right: -2rem;
+    width: 5rem;
+    height: 5rem;
     transform: translateY(-50%);
     border-radius: 50%;
     background: ${({ theme }) => theme.colors.primary};

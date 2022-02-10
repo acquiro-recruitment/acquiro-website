@@ -11,7 +11,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -133,10 +133,10 @@ const Headshot = styled.div`
 `
 
 const Image = styled.div`
-  width: 140px;
+  width: 8.75rem;
   margin-right: 2rem;
   border-radius: 50%;
-  border: 4px solid ${theme.colors.primary};
+  border: 0.25rem solid ${theme.colors.primary};
   overflow: hidden;
 `
 
@@ -160,7 +160,7 @@ const Info = styled.p`
 `
 
 const Address = styled.div`
-  width: 550px;
+  width: 34.375rem;
 `
 
 const Phone = styled.div`

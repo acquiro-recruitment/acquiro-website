@@ -44,18 +44,18 @@ const Hero = styled.div`
 const Heading = styled.h1`
   position: relative;
   display: block;
-  width: 900px;
+  width: 56.25rem;
   margin: 0;
   font-weight: 500;
-  font-size: 52px;
-  letter-spacing: -1.5px;
-  line-height: 70px;
+  font-size: 3.25rem;
+  letter-spacing: -0.09em;
+  line-height: 4.375rem;
   color: ${theme.colors.black};
   padding: 0;
   vertical-align: baseline;
   z-index: 1;
   opacity: 0;
-  transform: translate3d(0, 75px, 0);
+  transform: translate3d(0, 4.6875rem, 0);
   will-change: transform, opacity;
   transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s,
     transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.15s;
@@ -66,7 +66,7 @@ const HeroImage = styled.div`
   margin-top: 14rem;
   cursor: pointer;
   opacity: 0;
-  transform: translate3d(0, 75px, 0);
+  transform: translate3d(0, 4.6875rem, 0);
   will-change: transform, opacity;
   transition: opacity 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s,
     transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.35s;

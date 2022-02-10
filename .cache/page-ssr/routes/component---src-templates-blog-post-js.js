@@ -4319,30 +4319,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _styles_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/theme */ "./src/styles/theme.js");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
-  author
+  author,
+  small
 }) => {
   var _author$avatar;
 
   const avatarUrl = (author === null || author === void 0 ? void 0 : author.name) === "Acquiro International Recruitment" ? null : author === null || author === void 0 ? void 0 : (_author$avatar = author.avatar) === null || _author$avatar === void 0 ? void 0 : _author$avatar.url;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Bio, null, avatarUrl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Avatar, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Bio, {
+    small: small
+  }, avatarUrl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Avatar, {
     src: avatarUrl,
+    small: small,
     alt: (author === null || author === void 0 ? void 0 : author.name) || ``
-  }), (author === null || author === void 0 ? void 0 : author.name) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(BioName, null, author.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(BioRole, null, (author === null || author === void 0 ? void 0 : author.description) || null)));
+  }), (author === null || author === void 0 ? void 0 : author.name) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(BioName, {
+    small: small
+  }, author.name), !small && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(BioRole, null, (author === null || author === void 0 ? void 0 : author.description) || null)));
 });
-const Bio = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+const Bio = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "bio__Bio"
-})(["display:flex;align-items:center;padding-top:2rem;padding-bottom:2rem;"]);
-const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].img.withConfig({
+})(["display:flex;align-items:center;padding:", ";color:", ";"], ({
+  small
+}) => small ? "0" : "2rem 0", _styles_theme__WEBPACK_IMPORTED_MODULE_1__["default"].colors.black);
+const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].img.withConfig({
   displayName: "bio__Avatar"
-})(["max-width:4rem;margin-right:1.25rem;height:auto;border-radius:100%;"]);
-const BioName = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+})(["width:", ";margin-right:", ";height:auto;border-radius:100%;"], ({
+  small
+}) => small ? "2.25rem" : "4rem", ({
+  small
+}) => small ? "0.85rem" : "1.25rem");
+const BioName = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "bio__BioName"
-})(["font-size:1.25rem;font-weight:600;"]);
-const BioRole = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
+})(["font-size:", ";font-weight:600;"], ({
+  small
+}) => small ? "1rem" : "1.25rem");
+const BioRole = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "bio__BioRole"
 })(["font-size:1.1rem;"]);
 

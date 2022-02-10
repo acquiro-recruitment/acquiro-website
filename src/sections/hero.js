@@ -60,9 +60,9 @@ const Hero = styled.div`
 
 const Heading = styled.h1`
   margin-top: 4rem;
-  font-size: 64px;
+  font-size: 4rem;
   letter-spacing: 0.01em;
-  line-height: 76px;
+  line-height: 4.75rem;
   font-weight: 900;
   color: ${({ theme }) => theme.colors.black};
 `

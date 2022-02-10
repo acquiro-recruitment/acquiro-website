@@ -11,7 +11,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {

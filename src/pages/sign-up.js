@@ -12,7 +12,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -199,7 +199,7 @@ const StyledGlobe = styled(Globe)`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 520px;
+  width: 32.5rem;
   margin: 2rem auto 0;
   background: radial-gradient(60% 90% at 50% 30%, #e1eff5c5 2%, #ffffffe8 100%);
   opacity: 0.4;
@@ -211,12 +211,12 @@ const Form = styled.form(
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 420px;
+    max-width: 26.25rem;
     label,
     span {
       display: block;
       margin-bottom: 0.75rem;
-      padding-left: 1px;
+      padding-left: 0.0625rem;
       color: ${theme.colors.black};
       font-weight: 700;
       font-size: 0.9rem;
@@ -227,7 +227,7 @@ const Form = styled.form(
       padding-bottom: 0.25rem;
       padding-left: 0;
       border: none;
-      border-bottom: 1px solid #e7e3f1;
+      border-bottom: 0.0625rem solid #e7e3f1;
       font-size: 1rem;
       color: ${theme.colors.dark};
       -webkit-border-radius: 0;
@@ -245,7 +245,7 @@ const Form = styled.form(
       }
       @media (min-width: ${theme.breakpoints.s}) {
         font-size: 1.35rem;
-        padding: 1px 2px;
+        padding: 0.0625rem 0.125rem;
       }
     }
     input:-webkit-autofill,
@@ -255,10 +255,10 @@ const Form = styled.form(
     select {
       width: 100%;
       margin-bottom: 3.25rem;
-      padding-bottom: 2px;
+      padding-bottom: 0.125rem;
       padding-left: 0;
       border: none;
-      box-shadow: inset 0 -1px 0 0 #e7e3f1;
+      box-shadow: inset 0 -0.0625rem 0 0 #e7e3f1;
       font-size: 1rem;
       color: ${theme.colors.grey};
       -moz-appearance: none;
@@ -273,7 +273,7 @@ const Form = styled.form(
       &:focus {
         outline: none;
         border: none;
-        box-shadow: inset 0 -1px 0 0 ${theme.colors.primary} !important;
+        box-shadow: inset 0 -0.0625rem 0 0 ${theme.colors.primary} !important;
       }
       @media (min-width: ${theme.breakpoints.s}) {
         font-size: 1.35rem;
@@ -283,12 +283,12 @@ const Form = styled.form(
     input[type="checkbox"] {
       border: 0;
       clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
+      height: 0.0625rem;
+      margin: -0.0625rem;
       overflow: hidden;
       padding: 0;
       position: absolute;
-      width: 1px;
+      width: 0.0625rem;
       &:checked + label {
         color: ${theme.colors.primary} !important;
         &:after {
@@ -302,13 +302,13 @@ const Form = styled.form(
     button {
       margin: 0.75rem auto 1.25rem;
       width: 100%;
-      height: 55px;
+      height: 3.4375rem;
       padding-left: 0.75rem;
       color: white;
       font-weight: 800;
       background: ${theme.colors.black};
       font-size: 1.25rem;
-      border-radius: 35px;
+      border-radius: 2.1875rem;
       border: none;
       cursor: pointer;
       svg {
@@ -322,7 +322,7 @@ const Form = styled.form(
         svg {
           opacity: 1;
           color: white;
-          transform: translateX(4px);
+          transform: translateX(0.25rem);
         }
       }
       @media (min-width: ${theme.breakpoints.s}) {
@@ -335,63 +335,7 @@ const Form = styled.form(
 
 const selectedStyles = css`
   color: ${theme.colors.dark};
-  box-shadow: inset 0 -1px 0 0 ${theme.colors.primary};
-`
-
-const Checkbox = styled.label`
-  position: relative;
-  color: ${theme.colors.primary};
-  line-height: 30px;
-  font-size: 1rem !important;
-  color: ${theme.colors.grey} !important;
-  font-weight: 600 !important;
-  user-select: none;
-  cursor: pointer;
-  &:after {
-    content: "";
-    height: 30px;
-    width: 30px;
-    margin-right: 1rem;
-    float: left;
-    border: 1px solid ${theme.colors.grey};
-    border-radius: 6px;
-  }
-  @media (min-width: ${theme.breakpoints.s}) {
-    font-size: 1.35rem !important;
-  }
-`
-
-const Checkmark = styled.svg`
-  position: absolute;
-  top: 10px;
-  left: 8px;
-  opacity: 0;
-`
-
-const Blurb = styled.div`
-  position: relative;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  max-width: 220px;
-  display: none;
-  &:after {
-    content: "";
-    position: absolute;
-    top: -4rem;
-    bottom: 2.5rem;
-    width: 50px;
-    height: 50px;
-    background-color: #ff5c83;
-    border-radius: 50%;
-  }
-  @media (min-width: ${theme.breakpoints.s}) {
-    display: block;
-    max-width: 480px;
-    margin-top: -6rem;
-  }
-  @media (min-width: ${theme.breakpoints.xl}) {
-    margin-top: -4rem;
-  }
+  box-shadow: inset 0 -0.0625rem 0 0 ${theme.colors.primary};
 `
 
 export default SignUp

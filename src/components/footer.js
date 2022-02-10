@@ -50,13 +50,13 @@ const Footer = styled.footer`
   padding-bottom: 3rem;
   background-color: ${({ theme }) => theme.colors.black};
   color: white
-  min-height: 220px;
+  min-height: 13.75rem;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0;
     padding-bottom: 0;
-    min-height: 400px;
+    min-height: 25rem;
   }
 `
 
@@ -88,7 +88,7 @@ const Copyright = styled.div`
   color: white;
   @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
     order: 0;
-    width: 280px;
+    width: 17.5rem;
     margin-top: 0;
     font-size: 1.1rem;
   }
@@ -100,17 +100,17 @@ const Icons = styled.div`
   color: white;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
     justify-content: flex-end;
-    width: 280px;
+    width: 17.5rem;
     margin: 0;
   }
 `
 
 const Icon = styled.a`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   color: inherit;
   & + & {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
   &:visited,
   &:hover {
@@ -133,7 +133,7 @@ const ContactLink = styled(Link)`
     font-weight: 700;
   }
   svg {
-    width: 14px;
+    width: 0.875rem;
     margin-left: 0.35rem;
     margin-bottom: 0.025rem;
     color: white;
@@ -143,7 +143,7 @@ const ContactLink = styled(Link)`
     cursor: pointer;
     svg {
       opacity: 1;
-      transform: translateX(4px);
+      transform: translateX(0.25rem);
     }
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
@@ -154,7 +154,7 @@ const ContactLink = styled(Link)`
       font-size: 2.5rem;
     }
     svg {
-      width: 22px;
+      width: 1.375rem;
       margin-left: 0.5rem;
       margin-bottom: 0.05rem;
       opacity: 0.35;

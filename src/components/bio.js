@@ -1,19 +1,22 @@
 import React from "react"
 import styled from "styled-components"
+import theme from "../styles/theme"
 
-export default ({ author }) => {
+export default ({ author, small }) => {
   const avatarUrl =
     author?.name === "Acquiro International Recruitment"
       ? null
       : author?.avatar?.url
 
   return (
-    <Bio>
-      {avatarUrl && <Avatar src={avatarUrl} alt={author?.name || ``} />}
+    <Bio small={small}>
+      {avatarUrl && (
+        <Avatar src={avatarUrl} small={small} alt={author?.name || ``} />
+      )}
       {author?.name && (
         <div>
-          <BioName>{author.name}</BioName>
-          <BioRole>{author?.description || null}</BioRole>
+          <BioName small={small}>{author.name}</BioName>
+          {!small && <BioRole>{author?.description || null}</BioRole>}
         </div>
       )}
     </Bio>
@@ -23,19 +26,19 @@ export default ({ author }) => {
 const Bio = styled.div`
   display: flex;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: ${({ small }) => (small ? "0" : "2rem 0")};
+  color: ${theme.colors.black};
 `
 
 const Avatar = styled.img`
-  max-width: 4rem;
-  margin-right: 1.25rem;
+  width: ${({ small }) => (small ? "2.25rem" : "4rem")};
+  margin-right: ${({ small }) => (small ? "0.85rem" : "1.25rem")};
   height: auto;
   border-radius: 100%;
 `
 
 const BioName = styled.div`
-  font-size: 1.25rem;
+  font-size: ${({ small }) => (small ? "1rem" : "1.25rem")};
   font-weight: 600;
 `
 

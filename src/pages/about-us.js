@@ -13,7 +13,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -51,16 +51,16 @@ const About = () => {
                 companies from almost all parts of the world.
               </p>
               <p>
-                When you create a diverse team, no matter how big or small,
-                bridges are built between people and perceptions. And bridges
-                create new opportunities. And new opportunities create growth.
-              </p>
-              <p>
                 When we recruit a great candidate for a key position it is the
                 starting point of a chain reaction. The company and the
                 customers will profit. The team and the people close to them
                 will prosper. Eventually the business will grow and new bridges
                 will be built.
+              </p>
+              <p>
+                When you create a diverse team, no matter how big or small,
+                bridges are built between people and perceptions. And bridges
+                create new opportunities. And new opportunities create growth.
               </p>
             </Reveal>
           </Text>
@@ -116,7 +116,7 @@ const Container = styled.div`
 `
 
 const Info = styled.div`
-  width: 620px;
+  width: 38.75rem;
 `
 
 const NumbersWrapper = styled.div`
@@ -139,18 +139,18 @@ const Numbers = styled.div`
 
 const Description = styled.span`
   display: block;
-  font-size: 20px;
-  letter-spacing: -0.87px;
-  line-height: 30px;
-  margin-top: 5px;
-  margin-bottom: -20px;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  line-height: 1.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: -1.25rem;
 `
 
 const GlobeContainer = styled.div`
   position: absolute;
   top: 8rem;
   right: 1rem;
-  width: 600px;
+  width: 37.5rem;
   z-index: -1;
   opacity: 0.75;
 `

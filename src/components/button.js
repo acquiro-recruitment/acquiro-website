@@ -15,7 +15,7 @@ const Button = styled(Link)(
   ({ wide }) => css`
     position: relative;
     display: inline-block;
-    width: ${wide ? "100%" : "230px"};
+    width: ${wide ? "100%" : "14.375rem"};
     @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
       width: ${wide ? "19rem" : "14rem"};
     }

@@ -39,10 +39,10 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         </header>
 
         {!!post.content && (
-          <PostContainer>
+          <div>
             <section itemProp="articleBody">{parse(post.content)}</section>
             <Bio author={post.author.node} />
-          </PostContainer>
+          </div>
         )}
       </article>
 
@@ -117,31 +117,24 @@ export const pageQuery = graphql`
   }
 `
 
-const PostContainer = styled.div`
-  /* max-width: 800px;
-  margin: 0 auto; */
-`
-
 const PostHeading = styled.h1`
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: -0.8px;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: -0.05em;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    /* width: 720px; */
-    margin-bottom: 38px;
-    font-size: 56px;
-    line-height: 60px;
-    letter-spacing: -1.8px;
+    margin-bottom: 2.375rem;
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.1em;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
-    /* width: auto; */
-    margin-bottom: 64px;
-    font-size: 72px;
-    line-height: 72px;
-    letter-spacing: -2px;
+    margin-bottom: 4rem;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.125em;
   }
 `
 

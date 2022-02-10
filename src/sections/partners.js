@@ -8,7 +8,7 @@ import { keyframes } from "@emotion/react"
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 75px, 0);
+    transform: translate3d(0, 4.6875rem, 0);
   }
 
   to {
@@ -54,6 +54,6 @@ const Partners = styled.div`
 `
 
 const Partner = styled.div`
-  width: 300px;
+  width: 18.75rem;
   text-align: center;
 `
