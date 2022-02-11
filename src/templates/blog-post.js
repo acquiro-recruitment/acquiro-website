@@ -20,11 +20,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
     <Layout>
       <Seo title={post.title} description={post.excerpt} />
 
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article>
         <header>
           <PostHeading>{parse(post.title)}</PostHeading>
 
@@ -39,10 +35,10 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
         </header>
 
         {!!post.content && (
-          <div>
+          <PostContainer>
             <section itemProp="articleBody">{parse(post.content)}</section>
             <Bio author={post.author.node} />
-          </div>
+          </PostContainer>
         )}
       </article>
 
@@ -117,8 +113,12 @@ export const pageQuery = graphql`
   }
 `
 
+const PostContainer = styled.div`
+  padding: 0 2.5rem;
+`
+
 const PostHeading = styled.h1`
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 1.125rem;
   font-weight: 900;
   font-size: 2rem;
@@ -128,13 +128,13 @@ const PostHeading = styled.h1`
     margin-bottom: 2.375rem;
     font-size: 3.5rem;
     line-height: 3.75rem;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.01em;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
     margin-bottom: 4rem;
     font-size: 4.5rem;
     line-height: 4.5rem;
-    letter-spacing: -0.125em;
+    letter-spacing: -0.025em;
   }
 `
 

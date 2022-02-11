@@ -5,7 +5,7 @@ const theme = {
     black: "#212129",
     footer: "#212129",
     dark: "#0581b3",
-    grey: "#8f9597",
+    grey: "#7e8692",
     greyLight: "#e3e9ed",
     white: "#fff",
   },

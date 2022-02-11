@@ -3,14 +3,13 @@ import styled from "styled-components"
 import Flex from "../icons/flex"
 import Relocation from "../icons/relocation"
 import Growth from "../icons/growth"
-
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 4.6875rem, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {
@@ -22,41 +21,42 @@ const fadeIn = keyframes`
 export default () => (
   <Process>
     <Steps>
-      <Reveal delay={200} fraction={1} keyframes={fadeIn} triggerOnce>
+      <Reveal keyframes={fadeIn} fraction={1} triggerOnce>
         <Step>
           <StepIcon className="icon-flex">
             <Flex />
           </StepIcon>
           <StepHeading>Recruitment</StepHeading>
           <Text>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
-            harum ad quae officia expedita!
+            Are you looking for work or need new hires for your company?
+            <br />
+            We can help you either way.
           </Text>
         </Step>
       </Reveal>
 
-      <Reveal delay={400} fraction={1} keyframes={fadeIn} triggerOnce>
+      <Reveal delay={300} keyframes={fadeIn} fraction={1} triggerOnce>
         <Step>
           <StepIcon className="icon-relocation">
             <Relocation />
           </StepIcon>
           <StepHeading>Relocation</StepHeading>
           <Text>
-            Quaerat totam, dolor sit amet consectetur adipisicing elit. Aliquid
-            harum ad quae officia expedita!
+            We will give you all the support you need to successfully relocate
+            to your country of choice.
           </Text>
         </Step>
       </Reveal>
 
-      <Reveal delay={600} fraction={1} keyframes={fadeIn} triggerOnce>
+      <Reveal delay={600} keyframes={fadeIn} fraction={1} triggerOnce>
         <Step>
           <StepIcon className="icon-growth">
             <Growth />
           </StepIcon>
           <StepHeading>Adaptation</StepHeading>
           <Text>
-            Adipisicing ipsum, dolor sit amet consectetur adipisicing elit.
-            Aliquid harum ad quae officia expedita!
+            We do follow-ups 6 and 12 months after each placement to make sure
+            that everything is going well.
           </Text>
         </Step>
       </Reveal>
@@ -86,7 +86,7 @@ const Steps = styled.div`
 const Step = styled.div`
   display: flex;
   flex-direction: column;
-  width: 18.75;
+  width: 18.75rem;
   text-align: center;
 `
 

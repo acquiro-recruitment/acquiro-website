@@ -39,8 +39,8 @@ const SignUp = () => {
           <Reveal keyframes={fadeIn} delay={200} triggerOnce>
             <Text>
               Whether you're in the early stages of work discovery or urgently
-              looking for new hires, we respond to every inquiry within one
-              business day.
+              looking for new hires, we respond to every inquiry within a few
+              business days.
               <br />
               <br />
               Simply fill out the form with as much context as you're willing to
@@ -97,7 +97,7 @@ const SignUp = () => {
               </select>
             </div>
 
-            <div>
+            {/* <div>
               <label htmlFor="industry">
                 What industry are you in? (optional)
               </label>
@@ -109,18 +109,19 @@ const SignUp = () => {
                 placeholder="Enter your industry"
                 autocomplete="off"
               />
+            </div> */}
+
+            <div>
+              <label htmlFor="linkedin">LinkedIn profile address</label>
+
+              <input
+                type="text"
+                name="linkedin"
+                id="linkedin"
+                placeholder="Link to profile"
+                autocomplete="off"
+              />
             </div>
-
-            {/*
-            <label htmlFor="linkedin">LinkedIn profile address (optional)</label>
-
-            <input
-              type="text"
-              name="linkedin"
-              id="linkedin"
-              placeholder="Link to profile"
-              autocomplete="off"
-            /> */}
 
             <div>
               <label htmlFor="message">Message (optional)</label>
@@ -132,6 +133,8 @@ const SignUp = () => {
                 placeholder="Write us a message"
               />
             </div>
+
+            {/* <Upload>Upload CV (optional)</Upload> */}
 
             <button type="submit">
               Submit
@@ -175,11 +178,7 @@ const Info = styled.aside`
 const Heading = styled.h1`
   margin: 0;
   margin-bottom: 1.75rem;
-  font-size: 2rem;
   font-weight: 800;
-  @media (min-width: ${theme.breakpoints.s}) {
-    font-size: 3rem;
-  }
 `
 
 const Text = styled.p`
@@ -200,7 +199,7 @@ const StyledGlobe = styled(Globe)`
   left: 50%;
   transform: translateX(-50%);
   width: 32.5rem;
-  margin: 2rem auto 0;
+  margin: 1rem auto 2rem;
   background: radial-gradient(60% 90% at 50% 30%, #e1eff5c5 2%, #ffffffe8 100%);
   opacity: 0.4;
   border-radius: 50%;
@@ -223,7 +222,7 @@ const Form = styled.form(
     }
     input {
       width: 100%;
-      margin-bottom: 3.25rem;
+      margin-bottom: 3rem;
       padding-bottom: 0.25rem;
       padding-left: 0;
       border: none;
@@ -244,7 +243,7 @@ const Form = styled.form(
         border-color: ${theme.colors.dark};
       }
       @media (min-width: ${theme.breakpoints.s}) {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         padding: 0.0625rem 0.125rem;
       }
     }
@@ -254,7 +253,7 @@ const Form = styled.form(
     }
     select {
       width: 100%;
-      margin-bottom: 3.25rem;
+      margin-bottom: 3rem;
       padding-bottom: 0.125rem;
       padding-left: 0;
       border: none;
@@ -276,28 +275,9 @@ const Form = styled.form(
         box-shadow: inset 0 -0.0625rem 0 0 ${theme.colors.primary} !important;
       }
       @media (min-width: ${theme.breakpoints.s}) {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
       }
       ${selected && selectedStyles};
-    }
-    input[type="checkbox"] {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 0.0625rem;
-      margin: -0.0625rem;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 0.0625rem;
-      &:checked + label {
-        color: ${theme.colors.primary} !important;
-        &:after {
-          border-color: ${theme.colors.primary};
-        }
-        svg {
-          opacity: 1;
-        }
-      }
     }
     button {
       margin: 0.75rem auto 1.25rem;

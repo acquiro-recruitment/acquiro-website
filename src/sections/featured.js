@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
@@ -19,45 +18,52 @@ const fadeIn = keyframes`
 `
 
 export default () => (
-  <Reveal keyframes={fadeIn} fraction={0.75} triggerOnce>
-    <BlogPostWrapper>
+  <BlogPostWrapper>
+    <Reveal delay={200} keyframes={fadeIn} fraction={1} triggerOnce>
       <Heading>
         Recruitment insights from <br />
         personal experience.
       </Heading>
-      <BlogPosts>
-        <BlogPost to="/you-x-helps-launch-nibbly-a-new-grocery-delivery-company">
+    </Reveal>
+    <BlogPosts>
+      <BlogPost to="/blog/moving-to-sweden/">
+        <Reveal keyframes={fadeIn} fraction={0.5} triggerOnce>
           <BlogPostImage>
-            <StaticImage src="../images/blog1.jpg" alt="blog1" />
+            <StaticImage src="../images/blog/couple.jpeg" alt="blog1" />
           </BlogPostImage>
           <BlogPostHeading>Move To Sweden</BlogPostHeading>
           <BlogPostTitle>
             What is it like to work for a Swedish company?
           </BlogPostTitle>
-        </BlogPost>
-        <BlogPost to="/how-we-helped-the-help-list">
+        </Reveal>
+      </BlogPost>
+      <BlogPost to="/blog/international-engineers-secure-digitalization/">
+        <Reveal delay={400} keyframes={fadeIn} fraction={0.5} triggerOnce>
           <BlogPostImage>
-            <StaticImage src="../images/blog2.jpg" alt="blog2" />
+            <StaticImage src="../images/blog/automotive.png" alt="blog2" />
           </BlogPostImage>
-          <BlogPostHeading>Covid Support</BlogPostHeading>
+          <BlogPostHeading>The automotive industry</BlogPostHeading>
           <BlogPostTitle>
-            Aquiro Recrutiment launches initiative for talent hit by COVID
-            layoffs.
+            International engineers secure digitalization
           </BlogPostTitle>
-        </BlogPost>
-        <BlogButton to="/blog">
-          More Blog Posts
-          <svg width="16" height="11">
-            <path
-              d="M10.79 10.648c.182 0 .351-.035.506-.104.154-.07.307-.183.458-.34L15.5 6.316a2.87 2.87 0 00.373-.482.99.99 0 00.128-.511.965.965 0 00-.128-.506 2.991 2.991 0 00-.373-.478L11.754.444a1.502 1.502 0 00-.458-.34A1.22 1.22 0 0010.79 0c-.152 0-.298.03-.44.09-.142.06-.27.14-.383.241-.114.1-.205.219-.274.355a.951.951 0 00-.104.44c0 .195.034.367.104.515.069.148.182.304.34.468l1.9 1.957H1.363c-.429 0-.763.112-1.003.336-.24.224-.359.531-.359.922 0 .39.12.698.36.922.239.224.573.336 1.002.336h10.572l-1.9 1.957a1.762 1.762 0 00-.341.473c-.07.151-.104.324-.104.52 0 .151.034.295.104.43.069.136.16.254.274.355.113.1.241.181.383.24.142.06.288.09.44.09z"
-              fill="#fff"
-              fillRule="nonzero"
-            />
-          </svg>
-        </BlogButton>
-      </BlogPosts>
-    </BlogPostWrapper>
-  </Reveal>
+        </Reveal>
+      </BlogPost>
+      <ButtonWrapper>
+        <Reveal delay={600} keyframes={fadeIn} fraction={1} triggerOnce>
+          <BlogButton to="/blog">
+            More Blog Posts
+            <svg width="16" height="11">
+              <path
+                d="M10.79 10.648c.182 0 .351-.035.506-.104.154-.07.307-.183.458-.34L15.5 6.316a2.87 2.87 0 00.373-.482.99.99 0 00.128-.511.965.965 0 00-.128-.506 2.991 2.991 0 00-.373-.478L11.754.444a1.502 1.502 0 00-.458-.34A1.22 1.22 0 0010.79 0c-.152 0-.298.03-.44.09-.142.06-.27.14-.383.241-.114.1-.205.219-.274.355a.951.951 0 00-.104.44c0 .195.034.367.104.515.069.148.182.304.34.468l1.9 1.957H1.363c-.429 0-.763.112-1.003.336-.24.224-.359.531-.359.922 0 .39.12.698.36.922.239.224.573.336 1.002.336h10.572l-1.9 1.957a1.762 1.762 0 00-.341.473c-.07.151-.104.324-.104.52 0 .151.034.295.104.43.069.136.16.254.274.355.113.1.241.181.383.24.142.06.288.09.44.09z"
+                fill="#fff"
+                fillRule="nonzero"
+              />
+            </svg>
+          </BlogButton>
+        </Reveal>
+      </ButtonWrapper>
+    </BlogPosts>
+  </BlogPostWrapper>
 )
 
 const BlogPostWrapper = styled.div`
@@ -127,7 +133,7 @@ const BlogPostHeading = styled.h3`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.175em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
     margin-bottom: 0.75rem;
@@ -138,14 +144,20 @@ const BlogPostTitle = styled.h4`
   margin-top: 0.2rem;
   font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
   line-height: 1.45;
+`
+
+const ButtonWrapper = styled.div`
+  align-self: flex-start;
+  margin-top: 2rem;
+  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    margin-top: 5.35rem;
+  }
 `
 
 const BlogButton = styled(Link)`
   position: relative;
-  align-self: flex-start;
-  margin-top: 2rem;
   padding: 2rem 0;
   font-weight: 600;
   font-size: 1rem;
@@ -173,7 +185,6 @@ const BlogButton = styled(Link)`
     transition: all 0.2s ease-in-out;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin-top: 5.35rem;
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
       svg {

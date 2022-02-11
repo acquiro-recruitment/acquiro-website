@@ -100,7 +100,7 @@ async function createBlogPostArchive({ posts, gatsbyUtilities }) {
         path: getPagePath(pageNumber),
 
         // use the blog post archive template as the page component
-        component: path.resolve(`./src/pages/blog.js`),
+        component: path.resolve(`./src/pages/index.js`),
 
         // `context` is available in the template as a prop and
         // as a variable in GraphQL.

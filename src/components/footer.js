@@ -11,7 +11,6 @@ export default ({ light }) => {
     <Footer light={light}>
       <Container>
         <FooterContent>
-          <Copyright>Acquiro © Copyright {getYear()}</Copyright>
           <ContactLink to="/sign-up" light={light}>
             {/* <span>Do you have any questions?</span> */}
             <span>Let's start a conversation.</span>
@@ -27,15 +26,19 @@ export default ({ light }) => {
           </ContactLink>
           <Icons light={light}>
             <Icon
-              href="https://linkedin.com/company/youxventures/"
+              href="https://www.linkedin.com/company/acquiro-international-recruitment/"
               target="_blank"
             >
               <LinkedIn />
             </Icon>
-            <Icon href="https://instagram.com/youxventures/" target="_blank">
+            <Icon
+              href="https://www.instagram.com/acquiro.recruitment/"
+              target="_blank"
+            >
               <Instagram />
             </Icon>
           </Icons>
+          <Copyright>Copyright © Acquiro Recruitment {getYear()}</Copyright>
         </FooterContent>
       </Container>
     </Footer>
@@ -46,18 +49,8 @@ const Footer = styled.footer`
   position: relative;
   display: flex;
   align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
   background-color: ${({ theme }) => theme.colors.black};
-  color: white
-  min-height: 13.75rem;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 0;
-    padding-bottom: 0;
-    min-height: 25rem;
-  }
+  color: white;
 `
 
 const Container = styled.div`
@@ -71,38 +64,23 @@ const FooterContent = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: 6rem;
-    margin-bottom: 4rem;
-  }
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
 `
 
 const Copyright = styled.div`
-  order: 1;
-  margin-top: 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   color: white;
   @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    order: 0;
-    width: 17.5rem;
-    margin-top: 0;
     font-size: 1.1rem;
   }
 `
 
 const Icons = styled.div`
   display: flex;
-  margin: 2rem 0 1rem;
+  margin-bottom: 3.75rem;
   color: white;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    justify-content: flex-end;
-    width: 17.5rem;
-    margin: 0;
-  }
 `
 
 const Icon = styled.a`
@@ -119,7 +97,6 @@ const Icon = styled.a`
 `
 
 const ContactLink = styled(Link)`
-  display: inline-block;
   margin-top: 0.75rem;
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1rem;
@@ -147,7 +124,7 @@ const ContactLink = styled(Link)`
     }
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin-bottom: 7rem;
+    margin-bottom: 3.5rem;
     line-height: 1.6;
     font-size: 1.75rem;
     span {

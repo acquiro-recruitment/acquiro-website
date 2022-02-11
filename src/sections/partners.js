@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
 const fadeIn = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 4.6875rem, 0);
+    transform: translate3d(0, 3.125rem, 0);
   }
 
   to {

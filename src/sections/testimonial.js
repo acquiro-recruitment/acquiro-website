@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import Heart from "../icons/heart"
 import Quotation from "../icons/quotation"
-
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
@@ -20,7 +19,7 @@ const fadeIn = keyframes`
 `
 
 export default () => (
-  <Reveal keyframes={fadeIn} fraction={1} triggerOnce>
+  <Reveal keyframes={fadeIn} fraction={0.5} triggerOnce>
     <Testimonial>
       <StyledHeart />
       <StyledQuotation />
@@ -31,9 +30,9 @@ export default () => (
       <Client>Senior Software Engineer</Client>
       <Quote>
         Acquiro Recruitment is an incredible group of individuals that helped me
-        find my dream job. Dolor sit amet consectetur, adipisicing elit. Vero
-        commodi repudiandae id corrupti, amet non cumque consequuntur quis at
-        deleniti sit amet!
+        find a great job opportunity in Sweden. Dolor sit amet consectetur,
+        adipisicing elit. Vero commodi repudiandae id corrupti, amet non cumque
+        consequuntur quis at deleniti sit amet!
       </Quote>
     </Testimonial>
   </Reveal>
@@ -64,7 +63,7 @@ const Headshot = styled.div`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 0.3125 solid ${({ theme }) => theme.colors.primary};
+  border: 0.25rem solid ${({ theme }) => theme.colors.primary};
   overflow: hidden;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
     width: 5.875rem;
@@ -76,7 +75,7 @@ const Name = styled.div`
   font-size: 1.15rem;
   font-weight: 500;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin-top: 0;
+    margin-top: 0.5rem;
   }
 `
 

@@ -40,21 +40,23 @@ const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
     <Layout>
       {/* <Seo title="All posts" /> */}
 
-      <Reveal keyframes={fadeIn} triggerOnce>
-        <Posts>
-          {posts.map((post) => (
-            <PostCard post={post} key={post.uri} />
-          ))}
-        </Posts>
-      </Reveal>
+      <Container>
+        <Reveal keyframes={fadeIn} triggerOnce>
+          <Posts>
+            {posts.map((post) => (
+              <PostCard post={post} key={post.uri} />
+            ))}
+          </Posts>
+        </Reveal>
 
-      {previousPagePath && (
-        <>
-          <Link to={previousPagePath}>Previous page</Link>
-          <br />
-        </>
-      )}
-      {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+        {previousPagePath && (
+          <>
+            <Link to={previousPagePath}>Previous page</Link>
+            <br />
+          </>
+        )}
+        {nextPagePath && <Link to={nextPagePath}>Next page</Link>}
+      </Container>
     </Layout>
   )
 }
@@ -99,6 +101,10 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+const Container = styled.div`
+  margin: 2.5rem 0;
 `
 
 const Posts = styled.div`

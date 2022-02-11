@@ -24,14 +24,14 @@ const fadeIn = keyframes`
 
 const About = () => {
   const recruitments = useSpring({
-    val: 90,
+    val: 250,
     from: { val: 60 },
     delay: 600,
     config: { tension: 50, friction: 10 },
   })
 
   const years = useSpring({
-    val: 8,
+    val: 10,
     from: { val: 1 },
     delay: 1000,
     config: { tension: 50, friction: 10 },
@@ -46,9 +46,9 @@ const About = () => {
             <Reveal keyframes={fadeIn} triggerOnce cascade duration={600}>
               <p>
                 Acquiro is a digital recruitment agency focusing on
-                international specialist and tech recruitment. We have 8 years'
-                experience of international recruitment for global Scandinavian
-                companies from almost all parts of the world.
+                international specialists and tech recruitment. We have 10
+                years' experience of international recruitment for global
+                Scandinavian companies from almost all parts of the world.
               </p>
               <p>
                 When we recruit a great candidate for a key position it is the
@@ -95,13 +95,15 @@ const About = () => {
               <Description>
                 years
                 <br />
-                in business
+                of experience
               </Description>
             </Numbers>
           </Reveal>
 
           <GlobeContainer>
-            <StyledGlobe />
+            <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+              <StyledGlobe />
+            </Reveal>
           </GlobeContainer>
         </NumbersWrapper>
       </Container>
@@ -112,7 +114,7 @@ const About = () => {
 const Container = styled.div`
   display: flex;
   width: 100%;
-  margin: 4rem auto 10rem;
+  margin: 2.5rem auto 10rem;
 `
 
 const Info = styled.div`

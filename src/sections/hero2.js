@@ -38,7 +38,7 @@ export default () => {
 
 const Hero = styled.div`
   position: relative;
-  padding-top: 8rem;
+  padding-top: 12rem;
 `
 
 const Heading = styled.h1`
@@ -48,7 +48,7 @@ const Heading = styled.h1`
   margin: 0;
   font-weight: 500;
   font-size: 3.25rem;
-  letter-spacing: -0.09em;
+  letter-spacing: -0.035em;
   line-height: 4.375rem;
   color: ${theme.colors.black};
   padding: 0;

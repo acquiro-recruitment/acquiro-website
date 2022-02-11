@@ -31,8 +31,8 @@ const Contact = () => {
 
         <Reveal keyframes={fadeIn} delay={200} triggerOnce>
           <SubHeading>
-            Contact us if you'd like to talk about new opporunities, current
-            challenges or just get a coffee. The inbox is open.
+            Contact us if you'd like to talk about new opportunities, current
+            challenges or just get a coffee. Our inbox is open.
           </SubHeading>
         </Reveal>
 
@@ -104,7 +104,7 @@ const Contact = () => {
 }
 
 const Wrapper = styled.main`
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
   @media (min-width: ${theme.breakpoints.s}) {
     margin-bottom: 8rem;
@@ -124,7 +124,7 @@ const SubHeading = styled.h3`
 const Headshots = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 6rem 0;
+  margin: 5rem 0;
 `
 
 const Headshot = styled.div`
@@ -160,7 +160,7 @@ const Info = styled.p`
 `
 
 const Address = styled.div`
-  width: 34.375rem;
+  width: 34.15rem;
 `
 
 const Phone = styled.div`

@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-pages-index-js",
     "path": "/",
-    "result": {"pageContext":{}},
+    "result": {"pageContext":{"offset":0,"postsPerPage":10,"nextPagePath":null,"previousPagePath":null}},
     "staticQueryHashes": ["848497233"]}

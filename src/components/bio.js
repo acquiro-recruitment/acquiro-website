@@ -8,6 +8,8 @@ export default ({ author, small }) => {
       ? null
       : author?.avatar?.url
 
+  console.log(author)
+
   return (
     <Bio small={small}>
       {avatarUrl && (

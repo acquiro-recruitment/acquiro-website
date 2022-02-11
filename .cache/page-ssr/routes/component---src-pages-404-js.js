@@ -2778,7 +2778,7 @@ __webpack_require__.r(__webpack_exports__);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, {
     light: light
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Copyright, null, "Acquiro \xA9 Copyright ", getYear()), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ContactLink, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Container, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ContactLink, {
     to: "/sign-up",
     light: light
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Let's start a conversation."), "Sign up now", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
@@ -2790,20 +2790,18 @@ __webpack_require__.r(__webpack_exports__);
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icons, {
     light: light
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
-    href: "https://linkedin.com/company/youxventures/",
+    href: "https://www.linkedin.com/company/acquiro-international-recruitment/",
     target: "_blank"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_linkedin__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
-    href: "https://instagram.com/youxventures/",
+    href: "https://www.instagram.com/acquiro.recruitment/",
     target: "_blank"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_instagram__WEBPACK_IMPORTED_MODULE_3__["default"], null))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_instagram__WEBPACK_IMPORTED_MODULE_3__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Copyright, null, "Copyright \xA9 Acquiro Recruitment ", getYear()))));
 });
 const Footer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].footer.withConfig({
   displayName: "footer__Footer"
-})(["position:relative;display:flex;align-items:center;padding-top:2rem;padding-bottom:3rem;background-color:", ";color:white min-height:220px;@media (min-width:", "){flex-direction:row;justify-content:space-between;padding-top:0;padding-bottom:0;min-height:400px;}"], ({
+})(["position:relative;display:flex;align-items:center;background-color:", ";color:white;"], ({
   theme
-}) => theme.colors.black, ({
-  theme
-}) => theme.breakpoints.s);
+}) => theme.colors.black);
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
   displayName: "footer__Container"
 })(["width:", ";margin:0 auto;"], ({
@@ -2811,25 +2809,21 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.
 }) => theme.layout.wrapper);
 const FooterContent = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
   displayName: "footer__FooterContent"
-})(["position:relative;display:flex;flex-direction:column;align-items:center;width:100%;@media (min-width:", "){flex-direction:row;align-items:flex-end;justify-content:space-between;margin-top:6rem;margin-bottom:4rem;}"], ({
-  theme
-}) => theme.breakpoints.m);
+})(["position:relative;display:flex;flex-direction:column;align-items:center;width:100%;padding-top:2.5rem;padding-bottom:3.5rem;"]);
 const Copyright = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
   displayName: "footer__Copyright"
-})(["order:1;margin-top:1.5rem;font-size:0.9rem;font-weight:600;color:white;@media (min-width:", "){order:0;width:280px;margin-top:0;font-size:1.1rem;}"], ({
+})(["font-size:0.9rem;font-weight:600;color:white;@media (min-width:", "){font-size:1.1rem;}"], ({
   theme
 }) => theme.breakpoints.m);
 const Icons = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
   displayName: "footer__Icons"
-})(["display:flex;margin:2rem 0 1rem;color:white;@media (min-width:", "){justify-content:flex-end;width:280px;margin:0;}"], ({
-  theme
-}) => theme.breakpoints.s);
+})(["display:flex;margin-bottom:3.75rem;color:white;"]);
 const Icon = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].a.withConfig({
   displayName: "footer__Icon"
-})(["width:24px;height:24px;color:inherit;& + &{margin-left:40px;}&:visited,&:hover{color:inherit;}"]);
+})(["width:1.5rem;height:1.5rem;color:inherit;& + &{margin-left:2.5rem;}&:visited,&:hover{color:inherit;}"]);
 const ContactLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_4__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link).withConfig({
   displayName: "footer__ContactLink"
-})(["display:inline-block;margin-top:0.75rem;color:", ";font-size:1rem;text-align:center;font-weight:600;line-height:1.8;span{display:block;font-size:1rem;color:white;font-weight:700;}svg{width:14px;margin-left:0.35rem;margin-bottom:0.025rem;color:white;transition:all 0.2s ease-in-out;}&:hover{cursor:pointer;svg{opacity:1;transform:translateX(4px);}}@media (min-width:", "){margin-bottom:7rem;line-height:1.6;font-size:1.75rem;span{font-size:2.5rem;}svg{width:22px;margin-left:0.5rem;margin-bottom:0.05rem;opacity:0.35;}}"], ({
+})(["margin-top:0.75rem;color:", ";font-size:1rem;text-align:center;font-weight:600;line-height:1.8;span{display:block;font-size:1rem;color:white;font-weight:700;}svg{width:0.875rem;margin-left:0.35rem;margin-bottom:0.025rem;color:white;transition:all 0.2s ease-in-out;}&:hover{cursor:pointer;svg{opacity:1;transform:translateX(0.25rem);}}@media (min-width:", "){margin-bottom:3.5rem;line-height:1.6;font-size:1.75rem;span{font-size:2.5rem;}svg{width:1.375rem;margin-left:0.5rem;margin-bottom:0.05rem;opacity:0.35;}}"], ({
   theme
 }) => theme.colors.primary, ({
   theme
@@ -2889,10 +2883,10 @@ const PartlyActiveLink = ({
 
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header.withConfig({
   displayName: "header__Header"
-})(["display:flex;align-items:center;justify-content:space-between;padding:3.5rem 0 4rem;"]);
+})(["display:flex;align-items:center;justify-content:space-between;padding:2.5rem 0 2.5rem;"]);
 const LogoWrapper = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(PartlyActiveLink).withConfig({
   displayName: "header__LogoWrapper"
-})(["display:block;width:140px;"]);
+})(["display:block;width:8.75rem;"]);
 const Nav = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].nav.withConfig({
   displayName: "header__Nav"
 })(["display:flex;> * + *{margin-left:2rem;}"]);
@@ -3139,7 +3133,7 @@ const theme = {
     black: "#212129",
     footer: "#212129",
     dark: "#0581b3",
-    grey: "#8f9597",
+    grey: "#7e8692",
     greyLight: "#e3e9ed",
     white: "#fff"
   },
