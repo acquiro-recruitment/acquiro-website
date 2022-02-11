@@ -24,6 +24,12 @@ const fadeIn = keyframes`
 const SignUp = () => {
   const [selected, setSelected] = useState(false)
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log("submit")
+  }
+
   return (
     <Layout>
       {/* <Seo title="All posts" /> */}
@@ -55,7 +61,11 @@ const SignUp = () => {
           </Reveal>
         </Info>
 
-        <Form method="POST" selected={selected}>
+        <Form
+          method="POST"
+          selected={selected}
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <Reveal keyframes={fadeIn} delay={600} triggerOnce>
             <div>
               <label htmlFor="name">Who are you?</label>

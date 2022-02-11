@@ -6260,6 +6260,7 @@ __webpack_require__.r(__webpack_exports__);
   var _author$avatar;
 
   const avatarUrl = (author === null || author === void 0 ? void 0 : author.name) === "Acquiro International Recruitment" ? null : author === null || author === void 0 ? void 0 : (_author$avatar = author.avatar) === null || _author$avatar === void 0 ? void 0 : _author$avatar.url;
+  console.log(author);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Bio, {
     small: small
   }, avatarUrl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Avatar, {

@@ -138,6 +138,10 @@ const Image = styled.div`
   border-radius: 50%;
   border: 0.25rem solid ${theme.colors.primary};
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 `
 
 const Text = styled.p`

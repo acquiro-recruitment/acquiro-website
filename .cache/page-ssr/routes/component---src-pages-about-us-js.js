@@ -9509,7 +9509,7 @@ const fadeIn = _emotion_react__WEBPACK_IMPORTED_MODULE_7__.keyframes`
 
 const About = () => {
   const recruitments = (0,react_spring__WEBPACK_IMPORTED_MODULE_3__.useSpring)({
-    val: 90,
+    val: 250,
     from: {
       val: 60
     },
@@ -9520,7 +9520,7 @@ const About = () => {
     }
   });
   const years = (0,react_spring__WEBPACK_IMPORTED_MODULE_3__.useSpring)({
-    val: 8,
+    val: 10,
     from: {
       val: 1
     },
@@ -9535,7 +9535,7 @@ const About = () => {
     triggerOnce: true,
     cascade: true,
     duration: 600
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Acquiro is a digital recruitment agency focusing on international specialist and tech recruitment. We have 8 years' experience of international recruitment for global Scandinavian companies from almost all parts of the world."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "When we recruit a great candidate for a key position it is the starting point of a chain reaction. The company and the customers will profit. The team and the people close to them will prosper. Eventually the business will grow and new bridges will be built."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "When you create a diverse team, no matter how big or small, bridges are built between people and perceptions. And bridges create new opportunities. And new opportunities create growth."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_awesome_reveal__WEBPACK_IMPORTED_MODULE_8__.Reveal, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Acquiro is a digital recruitment agency focusing on international specialists and tech recruitment. We have 10 years' experience of international recruitment for global Scandinavian companies from almost all parts of the world."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "When we recruit a great candidate for a key position it is the starting point of a chain reaction. The company and the customers will profit. The team and the people close to them will prosper. Eventually the business will grow and new bridges will be built."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "When you create a diverse team, no matter how big or small, bridges are built between people and perceptions. And bridges create new opportunities. And new opportunities create growth."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_awesome_reveal__WEBPACK_IMPORTED_MODULE_8__.Reveal, {
     keyframes: fadeIn,
     delay: 600,
     triggerOnce: true
@@ -9552,7 +9552,7 @@ const About = () => {
     triggerOnce: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Numbers, {
     marginTop: true
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_spring__WEBPACK_IMPORTED_MODULE_3__.animated.h1, null, years.val.interpolate(val => Math.floor(val))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "years", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "in business"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GlobeContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_awesome_reveal__WEBPACK_IMPORTED_MODULE_8__.Reveal, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_spring__WEBPACK_IMPORTED_MODULE_3__.animated.h1, null, years.val.interpolate(val => Math.floor(val))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Description, null, "years", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "of experience"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(GlobeContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_awesome_reveal__WEBPACK_IMPORTED_MODULE_8__.Reveal, {
     keyframes: fadeIn,
     delay: 600,
     triggerOnce: true
