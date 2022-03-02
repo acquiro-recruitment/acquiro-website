@@ -16,24 +16,12 @@ const PostCard = ({ post }) => {
 
   return (
     <LinkWrapper to={post.uri} featured={post.isSticky}>
-      <Image>
-        <GatsbyImage
-          image={featuredImage.data}
-          alt={featuredImage.alt}
-          imgStyle={
-            post.isSticky
-              ? {
-                  height: "22.5rem",
-                  borderRadius: "0.625rem 0 0 0.625rem",
-                }
-              : { height: "15.625rem", borderRadius: "0.625rem 0.625rem 0 0" }
-          }
-        />
+      <Image featured={post.isSticky}>
+        <GatsbyImage image={featuredImage.data} alt={featuredImage.alt} />
       </Image>
       <Body featured={post.isSticky}>
         <PostTitle featured={post.isSticky}>{parse(post.title)}</PostTitle>
         {post.isSticky && <PostExcerpt>{parse(post.excerpt)}</PostExcerpt>}
-        {/* <div>Kevin Ivan</div> */}
         <Bio author={post.author.node} small />
       </Body>
     </LinkWrapper>
@@ -42,7 +30,7 @@ const PostCard = ({ post }) => {
 
 const LinkWrapper = styled(Link)`
   display: flex;
-  flex: ${({ featured }) => (featured ? "1 1 100%" : "1 1 25rem")};
+  flex: 1 1 25rem;
   flex-direction: column;
   order: ${({ featured }) => (featured ? "-1" : "0")};
   margin: ${({ noMargin }) => (noMargin ? "0 0 3rem" : "0 1.5rem 3rem")};
@@ -57,6 +45,7 @@ const LinkWrapper = styled(Link)`
     box-shadow: 0 2.1875rem 5rem 1.25rem rgba(31, 2, 89, 0.1);
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    flex: ${({ featured }) => (featured ? "1 1 100%" : "1 1 25rem")};
     flex-direction: ${({ featured }) => (featured ? "row" : "column")};
     border-radius: ${({ featured }) =>
       featured ? "0.625rem" : "0 0 0.625rem 0.625rem"};
@@ -67,6 +56,15 @@ const Image = styled.div`
   width: 100%;
   height: 15.625rem;
   transition: transform 0.2s ease-in-out;
+  img {
+    height: 15.625rem;
+  }
+  @media (min-width: ${theme.breakpoints.s}) {
+    height: ${({ featured }) => (featured ? "22.5rem" : "15.625rem")};
+    img {
+      height: ${({ featured }) => (featured ? "22.5rem" : "15.625rem")};
+    }
+  }
 `
 
 const Body = styled.div`
@@ -78,16 +76,22 @@ const Body = styled.div`
 `
 
 const PostTitle = styled.h3`
-  margin: ${({ featured }) => (featured ? "0" : "0 0 1.25rem")};
-  font-size: ${({ featured }) => (featured ? "1.75rem" : "1.15rem")};
+  margin: 0 0 1.25rem;
+  font-size: 1.15rem;
+  @media (min-width: ${theme.breakpoints.s}) {
+    margin: ${({ featured }) => (featured ? "0" : "0 0 1.25rem")};
+    font-size: ${({ featured }) => (featured ? "1.75rem" : "1.15rem")};
+  }
 `
 
 const PostExcerpt = styled.div`
   margin: 1rem 0;
-  padding-bottom: 2rem;
   font-size: 1rem;
   font-weight: 500;
   color: ${theme.colors.black};
+  @media (min-width: ${theme.breakpoints.s}) {
+    padding-bottom: 2rem;
+  }
 `
 
 export default PostCard

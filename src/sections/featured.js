@@ -18,7 +18,7 @@ const fadeIn = keyframes`
 `
 
 export default () => (
-  <BlogPostWrapper>
+  <Wrapper>
     <Reveal delay={200} keyframes={fadeIn} fraction={1} triggerOnce>
       <Heading>
         Recruitment insights from <br />
@@ -29,7 +29,11 @@ export default () => (
       <BlogPost to="/blog/moving-to-sweden/">
         <Reveal keyframes={fadeIn} fraction={0.5} triggerOnce>
           <BlogPostImage>
-            <StaticImage src="../images/blog/couple.jpeg" alt="blog1" />
+            <StaticImage
+              src="../images/blog/couple.jpeg"
+              alt="blog1"
+              style={{ borderRadius: "0.625rem" }}
+            />
           </BlogPostImage>
           <BlogPostHeading>Move To Sweden</BlogPostHeading>
           <BlogPostTitle>
@@ -40,7 +44,11 @@ export default () => (
       <BlogPost to="/blog/international-engineers-secure-digitalization/">
         <Reveal delay={400} keyframes={fadeIn} fraction={0.5} triggerOnce>
           <BlogPostImage>
-            <StaticImage src="../images/blog/automotive.png" alt="blog2" />
+            <StaticImage
+              src="../images/blog/automotive.png"
+              alt="blog2"
+              style={{ borderRadius: "0.625rem" }}
+            />
           </BlogPostImage>
           <BlogPostHeading>The automotive industry</BlogPostHeading>
           <BlogPostTitle>
@@ -63,14 +71,15 @@ export default () => (
         </Reveal>
       </ButtonWrapper>
     </BlogPosts>
-  </BlogPostWrapper>
+  </Wrapper>
 )
 
-const BlogPostWrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
-  margin-bottom: 4rem;
-  padding-top: 14rem;
+  margin-bottom: 6rem;
+  padding-top: 4rem;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+    padding-top: 14rem;
     margin-bottom: 8rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
@@ -152,13 +161,12 @@ const ButtonWrapper = styled.div`
   align-self: flex-start;
   margin-top: 2rem;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin-top: 5.35rem;
+    margin-top: 6rem;
   }
 `
 
 const BlogButton = styled(Link)`
   position: relative;
-  padding: 2rem 0;
   font-weight: 600;
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.black};

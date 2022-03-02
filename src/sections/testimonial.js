@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import Heart from "../icons/heart"
 import Quotation from "../icons/quotation"
+import theme from "../styles/theme"
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
@@ -43,15 +44,18 @@ const Testimonial = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 18rem auto 0;
+  margin: 12rem auto 0;
   padding: 3.5rem 2rem;
   box-shadow: 0 2.1875rem 6.25rem 0 rgba(31, 2, 89, 0.1);
   border-radius: 0.25rem;
   text-align: center;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     width: 37.5rem;
     padding: 3.5rem 0;
     border-radius: 1rem;
+  }
+  @media (min-width: ${theme.breakpoints.m}) {
+    margin: 18rem auto 0;
   }
 `
 
@@ -63,9 +67,9 @@ const Headshot = styled.div`
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  border: 0.25rem solid ${({ theme }) => theme.colors.primary};
+  border: 0.25rem solid ${theme.colors.primary};
   overflow: hidden;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     width: 5.875rem;
     height: 5.875rem;
   }
@@ -74,13 +78,13 @@ const Headshot = styled.div`
 const Name = styled.div`
   font-size: 1.15rem;
   font-weight: 500;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     margin-top: 0.5rem;
   }
 `
 
 const Client = styled.div`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${theme.colors.grey};
   font-size: 0.9rem;
   font-weight: 600;
 `
@@ -93,9 +97,9 @@ const Quote = styled.div`
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 400;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${theme.colors.text};
   font-style: italic;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     font-size: 1.15rem;
   }
 `
@@ -105,8 +109,8 @@ const StyledQuotation = styled(Quotation)`
   top: -2rem;
   left: -1rem;
   height: 1.5rem;
-  color: ${({ theme }) => theme.colors.primary};
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  color: ${theme.colors.primary};
+  @media (min-width: ${theme.breakpoints.s}) {
     top: -1.75rem;
     left: -2rem;
     height: 3rem;
@@ -119,8 +123,8 @@ const StyledHeart = styled(Heart)`
   right: 0;
   height: 2rem;
   transform: translateX(50%);
-  color: ${({ theme }) => theme.colors.primary};
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  color: ${theme.colors.primary};
+  @media (min-width: ${theme.breakpoints.s}) {
     height: 3.5rem;
   }
 `

@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import theme from "../styles/theme"
 import parse from "html-react-parser"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -50,7 +51,7 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
             </Link>
           )}
         </div>
-        <div>
+        <div style={{ textAlign: "right" }}>
           {next && (
             <Link to={next.uri} rel="next">
               {parse(next.title)} →
@@ -124,13 +125,13 @@ const PostHeading = styled.h1`
   font-size: 2rem;
   line-height: 2rem;
   letter-spacing: -0.05em;
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     margin-bottom: 2.375rem;
     font-size: 3.5rem;
     line-height: 3.75rem;
     letter-spacing: -0.01em;
   }
-  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+  @media (min-width: ${theme.breakpoints.l}) {
     margin-bottom: 4rem;
     font-size: 4.5rem;
     line-height: 4.5rem;
@@ -144,6 +145,10 @@ const PostNav = styled.nav`
   justify-content: space-between;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  gap: 2rem;
+  @media (min-width: ${theme.breakpoints.s}) {
+    /* gap: 0; */
+  }
 `
 
 export default BlogPostTemplate

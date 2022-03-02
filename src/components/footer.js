@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
+import theme from "../styles/theme"
 import LinkedIn from "../icons/linkedin"
 import Instagram from "../icons/instagram"
 
@@ -12,9 +13,7 @@ export default ({ light }) => {
       <Container>
         <FooterContent>
           <ContactLink to="/sign-up" light={light}>
-            {/* <span>Do you have any questions?</span> */}
             <span>Let's start a conversation.</span>
-            {/* Contact us */}
             Sign up now
             <svg viewBox="0 0 19 13">
               <path
@@ -24,7 +23,7 @@ export default ({ light }) => {
               />
             </svg>
           </ContactLink>
-          <Icons light={light}>
+          <Icons>
             <Icon
               href="https://www.linkedin.com/company/acquiro-international-recruitment/"
               target="_blank"
@@ -49,12 +48,12 @@ const Footer = styled.footer`
   position: relative;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${theme.colors.black};
   color: white;
 `
 
 const Container = styled.div`
-  width: ${({ theme }) => theme.layout.wrapper};
+  width: ${theme.layout.wrapper};
   margin: 0 auto;
 `
 
@@ -68,44 +67,16 @@ const FooterContent = styled.div`
   padding-bottom: 3.5rem;
 `
 
-const Copyright = styled.div`
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: white;
-  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    font-size: 1.1rem;
-  }
-`
-
-const Icons = styled.div`
-  display: flex;
-  margin-bottom: 3.75rem;
-  color: white;
-`
-
-const Icon = styled.a`
-  width: 1.5rem;
-  height: 1.5rem;
-  color: inherit;
-  & + & {
-    margin-left: 2.5rem;
-  }
-  &:visited,
-  &:hover {
-    color: inherit;
-  }
-`
-
 const ContactLink = styled(Link)`
   margin-top: 0.75rem;
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 1rem;
+  color: ${theme.colors.primary};
+  font-size: 1.25rem;
   text-align: center;
   font-weight: 600;
   line-height: 1.8;
   span {
     display: block;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: white;
     font-weight: 700;
   }
@@ -123,7 +94,7 @@ const ContactLink = styled(Link)`
       transform: translateX(0.25rem);
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     margin-bottom: 3.5rem;
     line-height: 1.6;
     font-size: 1.75rem;
@@ -136,5 +107,38 @@ const ContactLink = styled(Link)`
       margin-bottom: 0.05rem;
       opacity: 0.35;
     }
+  }
+`
+
+const Icons = styled.div`
+  display: flex;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  color: white;
+  @media (min-width: ${theme.breakpoints.s}) {
+    margin-top: 0;
+    margin-bottom: 3.75rem;
+  }
+`
+
+const Icon = styled.a`
+  width: 1.5rem;
+  height: 1.5rem;
+  color: inherit;
+  & + & {
+    margin-left: 2.5rem;
+  }
+  &:visited,
+  &:hover {
+    color: inherit;
+  }
+`
+
+const Copyright = styled.div`
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  @media (min-width: ${theme.breakpoints.s}) {
+    font-size: 1.1rem;
   }
 `

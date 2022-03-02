@@ -113,29 +113,43 @@ const About = () => {
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   width: 100%;
   margin: 2.5rem auto 10rem;
+  @media (min-width: ${theme.breakpoints.m}) {
+    flex-direction: row;
+  }
 `
 
 const Info = styled.div`
-  width: 38.75rem;
+  max-width: 38.75rem;
+  width: 100%;
 `
 
 const NumbersWrapper = styled.div`
   position: relative;
+  display: flex;
   flex: 1;
+  gap: 4rem;
+  margin-bottom: 2rem;
+  @media (min-width: ${theme.breakpoints.m}) {
+    display: block;
+    margin-bottom: 0;
+  }
 `
 
 const Numbers = styled.div`
-  text-align: right;
-  margin-top: ${({ marginTop }) => (marginTop ? "4rem" : 0)};
   h1 {
     display: inline-block;
     margin: 0;
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
-  & + & {
-    margin-top: 4rem;
+  @media (min-width: ${theme.breakpoints.m}) {
+    text-align: right;
+    margin-top: ${({ marginTop }) => (marginTop ? "4rem" : 0)};
+    h1 {
+      font-size: 5rem;
+    }
   }
 `
 
@@ -145,16 +159,21 @@ const Description = styled.span`
   letter-spacing: -0.025em;
   line-height: 1.875rem;
   margin-top: 0.25rem;
-  margin-bottom: -1.25rem;
+  @media (min-width: ${theme.breakpoints.m}) {
+    margin-bottom: -1.25rem;
+  }
 `
 
 const GlobeContainer = styled.div`
   position: absolute;
-  top: 8rem;
+  top: 34rem;
   right: 1rem;
   width: 37.5rem;
   z-index: -1;
   opacity: 0.75;
+  @media (min-width: ${theme.breakpoints.m}) {
+    top: 8rem;
+  }
 `
 
 const StyledGlobe = styled(Globe)`

@@ -2233,6 +2233,7 @@ exports.components = {
   "component---src-pages-contact-js": () => __webpack_require__.e(/*! import() | component---src-pages-contact-js */ "component---src-pages-contact-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/contact.js */ "./src/pages/contact.js")),
   "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js */ "./src/pages/index.js")),
   "component---src-pages-sign-up-js": () => __webpack_require__.e(/*! import() | component---src-pages-sign-up-js */ "component---src-pages-sign-up-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/sign-up.js */ "./src/pages/sign-up.js")),
+  "component---src-pages-terms-js": () => __webpack_require__.e(/*! import() | component---src-pages-terms-js */ "component---src-pages-terms-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/terms.js */ "./src/pages/terms.js")),
   "component---src-templates-blog-post-js": () => __webpack_require__.e(/*! import() | component---src-templates-blog-post-js */ "component---src-templates-blog-post-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/templates/blog-post.js */ "./src/templates/blog-post.js"))
 };
 
@@ -8553,6 +8554,39 @@ module.exports = require("/Users/bae/dev/acquiro-website/node_modules/react/inde
 
 /***/ }),
 
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");
+
+/***/ }),
+
+/***/ "https":
+/*!************************!*\
+  !*** external "https" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("https");
+
+/***/ }),
+
+/***/ "punycode":
+/*!***************************!*\
+  !*** external "punycode" ***!
+  \***************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("punycode");
+
+/***/ }),
+
 /***/ "stream":
 /*!*************************!*\
   !*** external "stream" ***!
@@ -8561,6 +8595,28 @@ module.exports = require("/Users/bae/dev/acquiro-website/node_modules/react/inde
 
 "use strict";
 module.exports = require("stream");
+
+/***/ }),
+
+/***/ "url":
+/*!**********************!*\
+  !*** external "url" ***!
+  \**********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("url");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ })
 

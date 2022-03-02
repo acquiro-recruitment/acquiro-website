@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Flex from "../icons/flex"
 import Relocation from "../icons/relocation"
 import Growth from "../icons/growth"
+import theme from "../styles/theme"
 import { Reveal } from "react-awesome-reveal"
 import { keyframes } from "@emotion/react"
 
@@ -66,21 +67,25 @@ export default () => (
 
 const Process = styled.div`
   position: relative;
-  padding-top: 16rem;
-`
-
-const Heading = styled.h1`
-  margin-bottom: 6rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: ${({ theme }) => theme.colors.black};
-  text-align: center;
+  padding-top: 16vw;
+  @media (min-width: ${theme.breakpoints.xl}) {
+    padding-top: 16rem;
+  }
 `
 
 const Steps = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  gap: 3.5rem;
+  /* > * + * {
+    margin-top: 2.5rem;
+  } */
+  @media (min-width: ${theme.breakpoints.m}) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 const Step = styled.div`
@@ -93,8 +98,8 @@ const Step = styled.div`
 const StepIcon = styled.div`
   width: 3.75rem;
   margin: 0 auto;
-  color: ${({ theme }) => theme.colors.primary};
-  @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
+  color: ${theme.colors.primary};
+  @media (min-width: ${theme.breakpoints.s}) {
     width: 6.25rem;
     &.icon-flex {
       width: 5rem;
@@ -114,5 +119,6 @@ const StepHeading = styled.h4`
 `
 
 const Text = styled.p`
+  margin: 0;
   font-size: 1.1rem;
 `

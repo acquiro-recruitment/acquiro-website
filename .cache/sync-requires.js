@@ -11,6 +11,7 @@ exports.components = {
   "component---src-pages-contact-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/contact.js")),
   "component---src-pages-index-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/index.js")),
   "component---src-pages-sign-up-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/sign-up.js")),
+  "component---src-pages-terms-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/pages/terms.js")),
   "component---src-templates-blog-post-js": preferDefault(require("/Users/bae/dev/acquiro-website/src/templates/blog-post.js"))
 }
 

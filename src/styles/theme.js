@@ -3,6 +3,7 @@ const theme = {
     primary: "#059eda",
     accent: "#059eda",
     black: "#212129",
+    text: "#2e353f",
     footer: "#212129",
     dark: "#0581b3",
     grey: "#7e8692",

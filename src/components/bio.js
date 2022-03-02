@@ -37,6 +37,8 @@ const Avatar = styled.img`
   margin-right: ${({ small }) => (small ? "0.85rem" : "1.25rem")};
   height: auto;
   border-radius: 100%;
+  border: ${({ small }) =>
+    small ? "none" : `3px solid ${theme.colors.primary}`};
 `
 
 const BioName = styled.div`

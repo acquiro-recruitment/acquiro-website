@@ -6,6 +6,7 @@ exports.components = {
   "component---src-pages-contact-js": () => import("./../../../src/pages/contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
   "component---src-pages-index-js": () => import("./../../../src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */),
   "component---src-pages-sign-up-js": () => import("./../../../src/pages/sign-up.js" /* webpackChunkName: "component---src-pages-sign-up-js" */),
+  "component---src-pages-terms-js": () => import("./../../../src/pages/terms.js" /* webpackChunkName: "component---src-pages-terms-js" */),
   "component---src-templates-blog-post-js": () => import("./../../../src/templates/blog-post.js" /* webpackChunkName: "component---src-templates-blog-post-js" */)
 }
 

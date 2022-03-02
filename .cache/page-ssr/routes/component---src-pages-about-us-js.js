@@ -9099,9 +9099,9 @@ const Button = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(gat
   displayName: "button__Button"
 })(({
   wide
-}) => (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["position:relative;display:inline-block;width:", ";@media (min-width:", "){width:", ";}"], wide ? "100%" : "14.375rem", ({
+}) => (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["position:relative;display:inline-block;width:12rem;@media (min-width:", "){width:14rem;}"], ({
   theme
-}) => theme.breakpoints.s, wide ? "19rem" : "14rem"));
+}) => theme.breakpoints.s));
 const Circle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "button__Circle"
 })(["position:relative;width:100%;height:2.25em;background:", ";border-radius:1.625em;transition:all 0.45s cubic-bezier(0.65,0,0.076,1);@media (min-width:", "){width:2.25em;background:", ";", ":hover &{width:100%;background:", ";}}"], ({
@@ -9147,9 +9147,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var _icons_linkedin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../icons/linkedin */ "./src/icons/linkedin.js");
-/* harmony import */ var _icons_instagram__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../icons/instagram */ "./src/icons/instagram.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _styles_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/theme */ "./src/styles/theme.js");
+/* harmony import */ var _icons_linkedin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../icons/linkedin */ "./src/icons/linkedin.js");
+/* harmony import */ var _icons_instagram__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../icons/instagram */ "./src/icons/instagram.js");
+
 
 
 
@@ -9171,47 +9173,35 @@ __webpack_require__.r(__webpack_exports__);
     d: "M12.484 12.676c.206 0 .396-.039.57-.117.174-.078.346-.206.517-.384l4.22-4.38c.185-.199.325-.38.421-.543.096-.164.144-.356.144-.576 0-.22-.048-.41-.144-.57a3.37 3.37 0 00-.421-.538l-4.22-4.391a1.693 1.693 0 00-.517-.384 1.376 1.376 0 00-.57-.117c-.17 0-.336.034-.496.101-.16.068-.304.158-.431.272-.128.114-.231.247-.31.4a1.072 1.072 0 00-.117.495c0 .22.04.414.118.581.078.167.206.343.383.528l2.142 2.206H1.86c-.484 0-.86.126-1.13.378-.27.252-.405.599-.405 1.04 0 .44.135.786.405 1.038s.646.379 1.13.379h11.914L11.631 10.3a1.986 1.986 0 00-.383.532c-.079.17-.118.366-.118.587 0 .17.04.332.118.484.078.153.18.286.309.4.127.114.271.204.431.272.16.067.325.101.496.101z",
     fill: "currentColor",
     fillRule: "nonzero"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icons, {
-    light: light
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
     href: "https://www.linkedin.com/company/acquiro-international-recruitment/",
     target: "_blank"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_linkedin__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_linkedin__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
     href: "https://www.instagram.com/acquiro.recruitment/",
     target: "_blank"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_instagram__WEBPACK_IMPORTED_MODULE_3__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Copyright, null, "Copyright \xA9 Acquiro Recruitment ", getYear()))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_instagram__WEBPACK_IMPORTED_MODULE_4__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Copyright, null, "Copyright \xA9 Acquiro Recruitment ", getYear()))));
 });
-const Footer = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].footer.withConfig({
+const Footer = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].footer.withConfig({
   displayName: "footer__Footer"
-})(["position:relative;display:flex;align-items:center;background-color:", ";color:white;"], ({
-  theme
-}) => theme.colors.black);
-const Container = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
+})(["position:relative;display:flex;align-items:center;background-color:", ";color:white;"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.black);
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "footer__Container"
-})(["width:", ";margin:0 auto;"], ({
-  theme
-}) => theme.layout.wrapper);
-const FooterContent = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
+})(["width:", ";margin:0 auto;"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].layout.wrapper);
+const FooterContent = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "footer__FooterContent"
 })(["position:relative;display:flex;flex-direction:column;align-items:center;width:100%;padding-top:2.5rem;padding-bottom:3.5rem;"]);
-const Copyright = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
-  displayName: "footer__Copyright"
-})(["font-size:0.9rem;font-weight:600;color:white;@media (min-width:", "){font-size:1.1rem;}"], ({
-  theme
-}) => theme.breakpoints.m);
-const Icons = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
+const ContactLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_5__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link).withConfig({
+  displayName: "footer__ContactLink"
+})(["margin-top:0.75rem;color:", ";font-size:1.25rem;text-align:center;font-weight:600;line-height:1.8;span{display:block;font-size:1.5rem;color:white;font-weight:700;}svg{width:0.875rem;margin-left:0.35rem;margin-bottom:0.025rem;color:white;transition:all 0.2s ease-in-out;}&:hover{cursor:pointer;svg{opacity:1;transform:translateX(0.25rem);}}@media (min-width:", "){margin-bottom:3.5rem;line-height:1.6;font-size:1.75rem;span{font-size:2.5rem;}svg{width:1.375rem;margin-left:0.5rem;margin-bottom:0.05rem;opacity:0.35;}}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.primary, _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
+const Icons = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "footer__Icons"
-})(["display:flex;margin-bottom:3.75rem;color:white;"]);
-const Icon = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].a.withConfig({
+})(["display:flex;margin-bottom:3rem;margin-top:2rem;color:white;@media (min-width:", "){margin-top:0;margin-bottom:3.75rem;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
+const Icon = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].a.withConfig({
   displayName: "footer__Icon"
 })(["width:1.5rem;height:1.5rem;color:inherit;& + &{margin-left:2.5rem;}&:visited,&:hover{color:inherit;}"]);
-const ContactLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_4__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link).withConfig({
-  displayName: "footer__ContactLink"
-})(["margin-top:0.75rem;color:", ";font-size:1rem;text-align:center;font-weight:600;line-height:1.8;span{display:block;font-size:1rem;color:white;font-weight:700;}svg{width:0.875rem;margin-left:0.35rem;margin-bottom:0.025rem;color:white;transition:all 0.2s ease-in-out;}&:hover{cursor:pointer;svg{opacity:1;transform:translateX(0.25rem);}}@media (min-width:", "){margin-bottom:3.5rem;line-height:1.6;font-size:1.75rem;span{font-size:2.5rem;}svg{width:1.375rem;margin-left:0.5rem;margin-bottom:0.05rem;opacity:0.35;}}"], ({
-  theme
-}) => theme.colors.primary, ({
-  theme
-}) => theme.breakpoints.s);
+const Copyright = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+  displayName: "footer__Copyright"
+})(["font-size:0.9rem;font-weight:600;color:white;@media (min-width:", "){font-size:1.1rem;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
 
 /***/ }),
 
@@ -9229,28 +9219,76 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-/* harmony import */ var _images_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo.svg */ "./src/images/logo.svg");
-/* harmony import */ var _images_logo_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_logo_svg__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _styles_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/theme */ "./src/styles/theme.js");
+/* harmony import */ var _icons_linkedin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../icons/linkedin */ "./src/icons/linkedin.js");
+/* harmony import */ var _icons_instagram__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../icons/instagram */ "./src/icons/instagram.js");
+/* harmony import */ var _images_logo_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/logo.svg */ "./src/images/logo.svg");
+/* harmony import */ var _images_logo_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_images_logo_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _images_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/logo_white.svg */ "./src/images/logo_white.svg");
+/* harmony import */ var _images_logo_white_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_images_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LogoWrapper, {
-  to: "/"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_logo_svg__WEBPACK_IMPORTED_MODULE_2___default()), null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
-  activeClassName: "active",
-  to: "/about-us"
-}, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
-  activeClassName: "active",
-  to: "/sign-up"
-}, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
-  activeClassName: "active",
-  to: "/blog"
-}, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
-  activeClassName: "active",
-  to: "/contact"
-}, "Contact"))));
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  const {
+    0: showMenu,
+    1: setShowMenu
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Header, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LogoWrapper, {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_logo_svg__WEBPACK_IMPORTED_MODULE_5___default()), null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Nav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/about-us"
+  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/sign-up"
+  }, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/blog"
+  }, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/contact"
+  }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Hamburger, {
+    "aria-label": "Toggle menu",
+    "aria-expanded": showMenu,
+    onClick: () => setShowMenu(!showMenu)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MobileMenu, {
+    style: {
+      transform: `${showMenu ? "none" : "translate3d(100vw, 0, 0)"}`
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MobileHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LogoWrapper, {
+    to: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((_images_logo_white_svg__WEBPACK_IMPORTED_MODULE_6___default()), null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Hamburger, {
+    "aria-label": "Toggle menu",
+    "aria-expanded": showMenu,
+    onClick: () => setShowMenu(!showMenu),
+    mobile: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MobileNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/about-us"
+  }, "About"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/sign-up"
+  }, "Sign Up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/blog"
+  }, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(NavLink, {
+    activeClassName: "active",
+    to: "/contact"
+  }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
+    href: "https://www.linkedin.com/company/acquiro-international-recruitment/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_linkedin__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Icon, {
+    href: "https://www.instagram.com/acquiro.recruitment/",
+    target: "_blank"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_icons_instagram__WEBPACK_IMPORTED_MODULE_4__["default"], null)))));
+});
 
 const partlyActive = className => ({
   isPartiallyCurrent
@@ -9265,22 +9303,38 @@ const PartlyActiveLink = ({
   getProps: partlyActive(className)
 }, rest));
 
-const Header = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header.withConfig({
+const Header = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].header.withConfig({
   displayName: "header__Header"
 })(["display:flex;align-items:center;justify-content:space-between;padding:2.5rem 0 2.5rem;"]);
-const LogoWrapper = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(PartlyActiveLink).withConfig({
+const LogoWrapper = (0,styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link).withConfig({
   displayName: "header__LogoWrapper"
 })(["display:block;width:8.75rem;"]);
-const Nav = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].nav.withConfig({
+const Nav = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].nav.withConfig({
   displayName: "header__Nav"
-})(["display:flex;> * + *{margin-left:2rem;}"]);
-const NavLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_3__["default"])(PartlyActiveLink).withConfig({
+})(["display:none;> * + *{margin-left:2rem;}@media (min-width:", "){display:flex;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
+const NavLink = (0,styled_components__WEBPACK_IMPORTED_MODULE_7__["default"])(PartlyActiveLink).withConfig({
   displayName: "header__NavLink"
-})(["font-weight:600;font-size:1.1rem;color:", ";transition:color 0.15s ease-in-out;&:hover{text-decoration:none;}&.active,&:focus,&:hover{color:", ";}"], ({
-  theme
-}) => theme.colors.black, ({
-  theme
-}) => theme.colors.primary);
+})(["font-weight:600;font-size:1.1rem;color:", ";transition:color 0.15s ease-in-out;&:hover{text-decoration:none;}&.active,&:focus,&:hover{color:", ";}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.black, _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.primary);
+const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].button.withConfig({
+  displayName: "header__Hamburger"
+})(["display:flex;flex-direction:column;justify-content:space-around;width:2rem;height:2rem;padding:0;background:transparent;border:none;z-index:2;cursor:pointer;&:focus{outline:none;}span{width:2rem;height:0.25rem;background-color:", ";}@media (min-width:", "){display:none;}"], ({
+  mobile
+}) => mobile ? "white" : _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.primary, _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
+const MobileMenu = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+  displayName: "header__MobileMenu"
+})(["position:fixed;top:0;right:0;left:0;width:100vw;height:100vh;z-index:", ";background:", ";transition:transform 0.15s ease-in-out;will-change:transform;@media (min-width:", "){display:none;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].z.mobileMenu, _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.black, _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].breakpoints.s);
+const MobileHeader = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+  displayName: "header__MobileHeader"
+})(["display:flex;align-items:center;justify-content:space-between;width:100%;padding:2.5rem 2rem;"]);
+const MobileNav = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].nav.withConfig({
+  displayName: "header__MobileNav"
+})(["position:absolute;display:flex;flex-direction:column;width:100%;top:50%;left:50%;transform:translate(-50%,-65%);text-align:center;a{display:block;width:100%;font-size:3.1vh;color:white;&.active{color:", ";}}a + a{margin-top:1rem;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_2__["default"].colors.primary);
+const Icons = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+  displayName: "header__Icons"
+})(["display:flex;align-items:center;position:absolute;bottom:8.5rem;left:50%;transform:translateX(-50%);"]);
+const Icon = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].a.withConfig({
+  displayName: "header__Icon"
+})(["width:3vh;color:white;.LinkedIn,.Unsplash{width:2.9vh;}& + &{margin-left:30px;}&:visited{fill:white;}"]);
 
 /***/ }),
 
@@ -9561,24 +9615,24 @@ const About = () => {
 
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "about-us__Container"
-})(["display:flex;width:100%;margin:2.5rem auto 10rem;"]);
+})(["display:flex;flex-direction:column-reverse;width:100%;margin:2.5rem auto 10rem;@media (min-width:", "){flex-direction:row;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_4__["default"].breakpoints.m);
 const Info = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "about-us__Info"
-})(["width:38.75rem;"]);
+})(["max-width:38.75rem;width:100%;"]);
 const NumbersWrapper = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "about-us__NumbersWrapper"
-})(["position:relative;flex:1;"]);
+})(["position:relative;display:flex;flex:1;gap:4rem;margin-bottom:2rem;@media (min-width:", "){display:block;margin-bottom:0;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_4__["default"].breakpoints.m);
 const Numbers = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "about-us__Numbers"
-})(["text-align:right;margin-top:", ";h1{display:inline-block;margin:0;font-size:5rem;}& + &{margin-top:4rem;}"], ({
+})(["h1{display:inline-block;margin:0;font-size:3.5rem;}@media (min-width:", "){text-align:right;margin-top:", ";h1{font-size:5rem;}}"], _styles_theme__WEBPACK_IMPORTED_MODULE_4__["default"].breakpoints.m, ({
   marginTop
 }) => marginTop ? "4rem" : 0);
 const Description = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].span.withConfig({
   displayName: "about-us__Description"
-})(["display:block;font-size:1.25rem;letter-spacing:-0.025em;line-height:1.875rem;margin-top:0.25rem;margin-bottom:-1.25rem;"]);
+})(["display:block;font-size:1.25rem;letter-spacing:-0.025em;line-height:1.875rem;margin-top:0.25rem;@media (min-width:", "){margin-bottom:-1.25rem;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_4__["default"].breakpoints.m);
 const GlobeContainer = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "about-us__GlobeContainer"
-})(["position:absolute;top:8rem;right:1rem;width:37.5rem;z-index:-1;opacity:0.75;"]);
+})(["position:absolute;top:34rem;right:1rem;width:37.5rem;z-index:-1;opacity:0.75;@media (min-width:", "){top:8rem;}"], _styles_theme__WEBPACK_IMPORTED_MODULE_4__["default"].breakpoints.m);
 const StyledGlobe = (0,styled_components__WEBPACK_IMPORTED_MODULE_9__["default"])((_images_globe_svg__WEBPACK_IMPORTED_MODULE_6___default())).withConfig({
   displayName: "about-us__StyledGlobe"
 })(["margin:2rem auto 0;background:radial-gradient(60% 90% at 50% 30%,#cbe9f6c5 2%,#ffffffe8 100%);opacity:0.1;border-radius:50%;"]);
@@ -9605,6 +9659,7 @@ const theme = {
     primary: "#059eda",
     accent: "#059eda",
     black: "#212129",
+    text: "#2e353f",
     footer: "#212129",
     dark: "#0581b3",
     grey: "#7e8692",
@@ -41187,6 +41242,27 @@ Logo.defaultProps = {"width":"928","height":"311","viewBox":"0 0 928 311","fill"
 module.exports = Logo;
 
 Logo.default = Logo;
+
+
+/***/ }),
+
+/***/ "./src/images/logo_white.svg":
+/*!***********************************!*\
+  !*** ./src/images/logo_white.svg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var React = __webpack_require__(/*! react */ "react");
+
+function LogoWhite (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M108.021 160.827L81.1594 82.6707L53.6755 160.827H108.021ZM148.326 233.799C141.301 235.327 131.834 231.961 128.173 222.799L117.182 191.663H42.6835L29.8608 222.799C28.3368 229.827 22.5381 233.799 15.2088 233.799H11.8541C2.69279 229.827 -0.977883 220.981 0.862117 213.651L66.1995 31.684C68.0288 25.884 73.5221 20.6947 81.1594 20.6947C88.4808 20.6947 93.6741 25.884 95.5061 31.684L157.479 213.651C160.841 220.981 157.479 229.827 148.326 233.799","fill":"white","key":0}),React.createElement("path",{"d":"M164.519 157.779C164.519 115.337 198.719 81.1458 240.849 81.1458C268.331 81.1458 293.669 95.7992 307.41 119.313C311.686 126.638 308.935 135.797 301.91 140.07C294.581 144.039 285.426 141.597 281.153 134.57C272.903 120.225 257.637 111.37 240.849 111.37C215.51 111.37 194.446 132.138 194.446 157.779C194.446 183.117 215.51 204.185 240.849 204.185C256.727 204.185 271.379 196.246 279.926 182.811C284.507 175.785 293.975 173.954 300.991 178.231C308.015 182.811 309.846 192.278 305.273 199.293C291.226 221.279 267.105 234.414 240.849 234.414C198.719 234.414 164.519 199.907 164.519 157.779Z","fill":"white","key":1}),React.createElement("path",{"d":"M353.838 158.691C353.838 184.333 374.595 205.102 400.239 205.102C425.884 205.102 446.65 184.333 446.65 158.999V158.691C446.65 133.046 425.884 112.289 400.239 112.289C374.595 112.289 353.838 133.354 353.838 158.691ZM323.604 158.691C323.604 116.562 357.806 82.0554 400.239 82.0554C442.374 82.0554 476.874 116.562 476.874 158.691V158.999V295.773C476.874 304.023 470.156 310.733 461.608 310.733C453.366 310.733 446.65 304.023 446.65 295.773V219.751C433.827 229.529 417.642 235.326 400.239 235.326C357.806 235.326 323.604 201.135 323.604 158.691Z","fill":"white","key":2}),React.createElement("path",{"d":"M617.638 96.1034V172.738V173.034C617.331 206.934 589.847 234.413 555.655 234.413C521.77 234.413 494.291 206.934 493.989 173.034V172.738V96.1034C493.989 87.8634 500.705 81.1461 508.947 81.1461C517.495 81.1461 524.211 87.8634 524.211 96.1034V172.433C524.211 189.833 538.253 204.185 555.655 204.185C573.365 204.185 587.411 189.833 587.411 172.433V96.1034C587.411 87.8634 594.131 81.1461 602.678 81.1461C610.919 81.1461 617.638 87.8634 617.638 96.1034Z","fill":"white","key":3}),React.createElement("path",{"d":"M636.581 219.144V96.1037C636.581 87.8637 643.297 81.1464 651.847 81.1464C660.089 81.1464 666.807 87.8637 666.807 96.1037V219.144C666.807 227.69 660.089 234.413 651.847 234.413C643.297 234.413 636.581 227.69 636.581 219.144ZM641.159 46.3384C638.409 43.5877 636.581 39.6224 636.581 35.6544C636.581 31.6837 638.409 27.7157 641.159 24.9704C643.902 22.2197 647.869 20.3891 651.847 20.3891C655.815 20.3891 659.781 22.2197 662.531 24.9704C665.275 27.7157 666.807 31.6837 666.807 35.6544C666.807 39.6224 665.275 43.5877 662.531 46.3384C659.781 49.0864 655.815 50.6157 651.847 50.6157C647.869 50.6157 643.902 49.0864 641.159 46.3384","fill":"white","key":4}),React.createElement("path",{"d":"M776.107 96.1034C776.107 104.353 769.391 111.37 760.843 111.37C735.2 111.37 714.433 132.137 714.433 157.779V219.143C714.433 227.394 707.724 234.413 699.473 234.413C690.927 234.413 684.207 227.394 684.207 219.143V157.779C684.207 115.337 718.707 81.1461 760.843 81.1461C769.391 81.1461 776.107 87.8634 776.107 96.1034Z","fill":"white","key":5}),React.createElement("path",{"d":"M805.414 157.475C805.414 182.811 826.182 203.886 851.825 203.886C877.47 203.886 898.237 182.811 898.237 157.475C898.237 131.819 877.47 111.062 851.825 111.062C826.182 111.062 805.414 131.819 805.414 157.475ZM775.187 157.475C775.187 115.039 809.687 80.8392 851.825 80.8392C894.267 80.8392 928.459 115.039 928.459 157.475C928.459 199.61 894.267 234.103 851.825 234.103C809.687 234.103 775.187 199.61 775.187 157.475","fill":"white","key":6}),React.createElement("path",{"d":"M612.615 37.9283C612.615 17.1629 630.127 -0.343722 650.889 -0.343722C671.653 -0.343722 689.161 17.1629 689.161 37.9283C689.161 58.6976 671.653 76.2083 650.889 76.2083C630.127 76.2083 612.615 58.6976 612.615 37.9283Z","fill":"#00ADEF","key":7})]);
+}
+
+LogoWhite.defaultProps = {"width":"928","height":"311","viewBox":"0 0 928 311","fill":"none"};
+
+module.exports = LogoWhite;
+
+LogoWhite.default = LogoWhite;
 
 
 /***/ }),
