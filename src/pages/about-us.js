@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -69,6 +70,9 @@ const About = () => {
             <Button dark href="/sign-up">
               Sign up now
             </Button>
+            <ContactLink>
+              Or visit our <Link to="/contact">contact page.</Link>
+            </ContactLink>
           </Reveal>
         </Info>
 
@@ -115,7 +119,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  margin: 2.5rem auto 10rem;
+  margin: 2.5rem auto 8rem;
   @media (min-width: ${theme.breakpoints.m}) {
     flex-direction: row;
   }
@@ -195,6 +199,11 @@ const Text = styled.p`
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  font-size: 1.25rem;
+`
+
+const ContactLink = styled.div`
+  margin-top: 3.25rem;
   font-size: 1.25rem;
 `
 

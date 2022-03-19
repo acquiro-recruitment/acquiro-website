@@ -22,13 +22,25 @@ export default () => (
     <Container>
       <Heading>Partners</Heading>
       <Partners>
-        <Partner>
+        <Partner
+          href="https://pulsifi.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <StaticImage src="../images/pulsifi.png" alt="pulsfi" />
         </Partner>
-        <Partner>
+        <Partner
+          href="https://www.k2corporatemobility.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <StaticImage src="../images/k2.png" alt="k2" />
         </Partner>
-        <Partner>
+        <Partner
+          href="https://www.thenewbieguide.se/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <StaticImage src="../images/newbie.png" alt="newbie" />
         </Partner>
       </Partners>
@@ -60,7 +72,7 @@ const Partners = styled.div`
   width: 100%;
 `
 
-const Partner = styled.div`
+const Partner = styled.a`
   text-align: center;
   @media (min-width: ${theme.breakpoints.m}) {
     width: 18.75rem;

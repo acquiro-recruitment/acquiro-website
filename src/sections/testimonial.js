@@ -25,15 +25,18 @@ export default () => (
       <StyledHeart />
       <StyledQuotation />
       <Headshot>
-        <StaticImage src="../images/testimonial.jpg" alt="testimonial" />
+        <StaticImage src="../images/rafael.jpg" alt="testimonial" />
       </Headshot>
-      <Name>Kevin Ivan</Name>
-      <Client>Senior Software Engineer</Client>
+      <Name>Rafael Rodrigo</Name>
+      <Client>Key Account Manager</Client>
       <Quote>
-        Acquiro Recruitment is an incredible group of individuals that helped me
-        find a great job opportunity in Sweden. Dolor sit amet consectetur,
-        adipisicing elit. Vero commodi repudiandae id corrupti, amet non cumque
-        consequuntur quis at deleniti sit amet!
+        My experience with Acquiro, was and still is great. The recruitment
+        process was smooth and effective. I feel like I had a good amount of
+        information, that allowed me to be ready for all the stages in the
+        recruitment process. Ultimately, I am glad to have landed in a great
+        opportunity thanks to Acquiro, and overall I am grateful that their
+        involvement with my case still present after I signed my job contract.
+        Sincerely, thank you so much!
       </Quote>
     </Testimonial>
   </Reveal>
@@ -50,8 +53,8 @@ const Testimonial = styled.div`
   border-radius: 0.25rem;
   text-align: center;
   @media (min-width: ${theme.breakpoints.s}) {
-    width: 37.5rem;
-    padding: 3.5rem 0;
+    width: 45rem;
+    padding: 3.5rem 0 4.25rem;
     border-radius: 1rem;
   }
   @media (min-width: ${theme.breakpoints.m}) {
@@ -90,7 +93,7 @@ const Client = styled.div`
 `
 
 const Quote = styled.div`
-  max-width: 28.125rem;
+  max-width: 36rem;
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;

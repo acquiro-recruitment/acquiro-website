@@ -148,7 +148,7 @@ const HeroVideo = styled.div`
     transform: translate(-50%, -50%);
   }
   @media (min-width: ${theme.breakpoints.m}) {
-    margin-top: 12rem;
+    margin-top: 16rem;
     svg {
       width: 5.625rem;
       height: 5.625rem;
@@ -164,8 +164,8 @@ const GlobeContainer = styled.div`
   z-index: -1;
   opacity: 0.75;
   @media (min-width: ${theme.breakpoints.m}) {
-    width: 50rem;
-    top: -3.5rem;
+    width: 32rem;
+    top: -2.5rem;
   }
 `
 
