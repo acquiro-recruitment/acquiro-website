@@ -118,7 +118,6 @@ const StyledGlobe = styled(Globe)`
   transform: translateX(-50%);
   width: 32.5rem;
   margin: 1rem auto 2rem;
-  background: radial-gradient(60% 90% at 50% 30%, #e1eff5c5 2%, #ffffffe8 100%);
   opacity: 0.4;
   border-radius: 50%;
 `

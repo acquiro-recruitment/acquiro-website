@@ -171,7 +171,6 @@ const GlobeContainer = styled.div`
 
 const StyledGlobe = styled(Globe)`
   margin: 2rem auto 0;
-  background: radial-gradient(60% 90% at 50% 30%, #cbe9f6c5 2%, #ffffffe8 100%);
   opacity: 0.1;
   border-radius: 50%;
 `

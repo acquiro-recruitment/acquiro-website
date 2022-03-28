@@ -72,7 +72,7 @@ const Contact = () => {
               </Image>
               <Text>
                 <span>Elias Danger</span>
-                Recruiting Consultant
+                Recruitment Consultant
                 <br />
                 <a href="mailto:elias.danger@acquirorecruitment.com">
                   elias.danger@acquirorecruitment.com

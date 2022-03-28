@@ -177,6 +177,7 @@ export default () => {
           >
             <option value="">Select from the menu</option>
             <option value="Looking for work">I'm looking for work</option>
+            <option value="Interim">I'm looking for interim assignments</option>
             <option value="Hiring">I'm hiring</option>
             <option value="Just Saying Hi!">Just Saying Hi!</option>
           </select>

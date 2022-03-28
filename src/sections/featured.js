@@ -21,8 +21,9 @@ export default () => (
   <Wrapper>
     <Reveal delay={200} keyframes={fadeIn} fraction={1} triggerOnce>
       <Heading>
-        Recruitment insights from <br />
-        personal experience.
+        Acquiro Insights
+        {/* Recruitment insights from <br />
+        personal experience. */}
       </Heading>
     </Reveal>
     <BlogPosts>
