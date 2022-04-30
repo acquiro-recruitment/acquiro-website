@@ -10,7 +10,7 @@ import Featured from "../sections/featured"
 const Home = () => {
   return (
     <Layout isHomePage>
-      {/* <Seo title="All posts" /> */}
+      <Seo title="Acquiro Recruitment" />
 
       <Hero />
       <Process />

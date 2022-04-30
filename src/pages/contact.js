@@ -26,7 +26,7 @@ const fadeIn = keyframes`
 const Contact = () => {
   return (
     <Layout>
-      {/* <Seo title="All posts" /> */}
+      <Seo title="Contact" />
       <Wrapper>
         <Reveal keyframes={fadeIn} triggerOnce>
           <Heading>Get in touch</Heading>

@@ -26,7 +26,7 @@ const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
   if (!posts.length) {
     return (
       <Layout>
-        <Seo title="All posts" />
+        <Seo title="Blog" />
 
         <p>
           No blog posts found. Add posts to your WordPress site and they'll
@@ -38,7 +38,7 @@ const Blog = ({ data, pageContext: { nextPagePath, previousPagePath } }) => {
 
   return (
     <Layout>
-      {/* <Seo title="All posts" /> */}
+      <Seo title="Blog" />
 
       <Container>
         <Reveal keyframes={fadeIn} triggerOnce>

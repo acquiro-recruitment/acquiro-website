@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 import theme from "../styles/theme"
-import Video from "../video/acquiro_720.mp4"
+import Video from "../video/acquiro_720_compressed.mp4"
 import Globe from "../images/globe.svg"
 
 export default () => {
@@ -15,18 +15,15 @@ export default () => {
       await videoRef.current.play()
       playBtnRef.current.style.opacity = 0
       videoRef.current.setAttribute("controls", "controls")
-      console.log("playing!")
     } catch (err) {
-      console.log("not playing")
+      console.log("not playing! error")
     }
   }
 
   const handlePlay = () => {
     if (videoRef.current.paused) {
-      console.log("play")
       play()
     } else {
-      console.log("pause")
       videoRef.current.pause()
     }
   }
@@ -38,23 +35,6 @@ export default () => {
     containerRef.current.style.opacity = 1
     containerRef.current.style.transform = "translate3d(0, 0, 0)"
   }, [])
-
-  // useEffect(() => {
-  //   if (typeof window === "undefined") return
-
-  //   const onScroll = (e) => {
-  //     const scrollTop = e.target.documentElement.scrollTop
-  //     const playDistance = 200
-
-  //     if (scrollTop > playDistance) {
-  //       play()
-  //       window.removeEventListener("scroll", onScroll)
-  //     }
-  //   }
-  //   window.addEventListener("scroll", onScroll)
-
-  //   return () => window.removeEventListener("scroll", onScroll)
-  // }, [])
 
   return (
     <Hero>

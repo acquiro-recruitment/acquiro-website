@@ -40,7 +40,7 @@ const About = () => {
 
   return (
     <Layout>
-      {/* <Seo title="All posts" /> */}
+      <Seo title="About us" />
       <Container>
         <Info>
           <Text>
