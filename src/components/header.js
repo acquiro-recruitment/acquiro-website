@@ -1,99 +1,141 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { isMobile } from "react-device-detect"
 import theme from "../styles/theme"
 import LinkedIn from "../icons/linkedin"
 import Instagram from "../icons/instagram"
 import Logo from "../images/logo.svg"
 import LogoWhite from "../images/logo_white.svg"
 
-export default () => {
+export default ({ isHomePage }) => {
   const [showMenu, setShowMenu] = useState(false)
+  const [insideVideo, setInsideVideo] = useState(true)
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !isHomePage) return
+
+    const onScroll = (e) => {
+      const scrollTop = e.target.documentElement.scrollTop
+      const distance = 600
+
+      if (scrollTop > distance) {
+        setInsideVideo(false)
+      } else {
+        setInsideVideo(true)
+      }
+    }
+    window.addEventListener("scroll", onScroll)
+
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
-    <Header>
-      <LogoWrapper to="/">
-        <Logo />
-      </LogoWrapper>
+    <HeaderWrapper isHomePage={isHomePage} insideVideo={insideVideo}>
+      <Header>
+        <LogoWrapper to="/" insideVideo={insideVideo} isHomePage={isHomePage}>
+          <Logo />
+        </LogoWrapper>
 
-      <Nav>
-        <NavLink activeClassName="active" to="/about-us">
-          About
-        </NavLink>
-        <NavLink activeClassName="active" to="/sign-up">
-          Sign up
-        </NavLink>
-        <NavLink activeClassName="active" to="/blog">
-          Blog
-        </NavLink>
-        <NavLink activeClassName="active" to="/contact">
-          Contact
-        </NavLink>
-      </Nav>
-
-      <Hamburger
-        aria-label="Toggle menu"
-        aria-expanded={showMenu}
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        <span />
-        <span />
-        <span />
-      </Hamburger>
-
-      <MobileMenu
-        style={{
-          transform: `${showMenu ? "none" : "translate3d(100vw, 0, 0)"}`,
-        }}
-      >
-        <MobileHeader>
-          <LogoWrapper to="/">
-            <LogoWhite />
-          </LogoWrapper>
-
-          <Hamburger
-            aria-label="Toggle menu"
-            aria-expanded={showMenu}
-            onClick={() => setShowMenu(!showMenu)}
-            mobile
+        <Nav>
+          <NavLink
+            isHomePage={isHomePage}
+            insideVideo={insideVideo}
+            activeClassName="active"
+            to="/about-us"
           >
-            <span />
-            <span />
-            <span />
-          </Hamburger>
-        </MobileHeader>
-
-        <MobileNav>
-          <NavLink activeClassName="active" to="/about-us">
             About
           </NavLink>
-          <NavLink activeClassName="active" to="/sign-up">
-            Sign Up
+          <NavLink
+            isHomePage={isHomePage}
+            insideVideo={insideVideo}
+            activeClassName="active"
+            to="/sign-up"
+          >
+            Sign up
           </NavLink>
-          <NavLink activeClassName="active" to="/blog">
+          <NavLink
+            isHomePage={isHomePage}
+            insideVideo={insideVideo}
+            activeClassName="active"
+            to="/blog"
+          >
             Blog
           </NavLink>
-          <NavLink activeClassName="active" to="/contact">
+          <NavLink
+            isHomePage={isHomePage}
+            insideVideo={insideVideo}
+            activeClassName="active"
+            to="/contact"
+          >
             Contact
           </NavLink>
-        </MobileNav>
+        </Nav>
 
-        <Icons>
-          <Icon
-            href="https://www.linkedin.com/company/acquiro-international-recruitment/"
-            target="_blank"
-          >
-            <LinkedIn />
-          </Icon>
-          <Icon
-            href="https://www.instagram.com/acquiro.recruitment/"
-            target="_blank"
-          >
-            <Instagram />
-          </Icon>
-        </Icons>
-      </MobileMenu>
-    </Header>
+        <Hamburger
+          aria-label="Toggle menu"
+          aria-expanded={showMenu}
+          onClick={() => setShowMenu(!showMenu)}
+        >
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+
+        <MobileMenu
+          style={{
+            transform: `${showMenu ? "none" : "translate3d(100vw, 0, 0)"}`,
+          }}
+        >
+          <MobileHeader>
+            <LogoWrapper to="/">
+              <LogoWhite />
+            </LogoWrapper>
+
+            <Hamburger
+              aria-label="Toggle menu"
+              aria-expanded={showMenu}
+              onClick={() => setShowMenu(!showMenu)}
+              mobile
+            >
+              <span />
+              <span />
+              <span />
+            </Hamburger>
+          </MobileHeader>
+
+          <MobileNav>
+            <NavLink activeClassName="active" to="/about-us">
+              About
+            </NavLink>
+            <NavLink activeClassName="active" to="/sign-up">
+              Sign Up
+            </NavLink>
+            <NavLink activeClassName="active" to="/blog">
+              Blog
+            </NavLink>
+            <NavLink activeClassName="active" to="/contact">
+              Contact
+            </NavLink>
+          </MobileNav>
+
+          <Icons>
+            <Icon
+              href="https://www.linkedin.com/company/acquiro-international-recruitment/"
+              target="_blank"
+            >
+              <LinkedIn />
+            </Icon>
+            <Icon
+              href="https://www.instagram.com/acquiro.recruitment/"
+              target="_blank"
+            >
+              <Instagram />
+            </Icon>
+          </Icons>
+        </MobileMenu>
+      </Header>
+    </HeaderWrapper>
   )
 }
 
@@ -105,16 +147,38 @@ const PartlyActiveLink = ({ className, ...rest }) => (
   <Link getProps={partlyActive(className)} {...rest} />
 )
 
+const HeaderWrapper = styled.div`
+  position: ${({ isHomePage }) => (isHomePage ? "fixed" : "relative")};
+  width: 100%;
+  z-index: 2;
+  box-shadow: ${({ isHomePage, insideVideo }) =>
+    isHomePage && !insideVideo ? "0px 4px 15px rgb(0 0 0 / 10%)" : "none"};
+  background: ${({ isHomePage, insideVideo }) =>
+    isHomePage && !insideVideo ? "white" : "transparent"};
+  transition: all 0.25s ease-in-out;
+`
+
 const Header = styled.header`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 0 2.5rem;
+  max-width: ${({ theme }) => theme.layout.wrapper};
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  z-index: 2;
+  transition: padding 0.25s ease-in-out;
 `
 
 const LogoWrapper = styled(Link)`
   display: block;
   width: 8.75rem;
+  color: #3b393c;
+
+  @media (min-width: ${theme.breakpoints.s}) {
+    color: ${({ isHomePage, insideVideo }) =>
+      insideVideo && isHomePage ? "white" : "#3B393C"};
+  }
 `
 
 const Nav = styled.nav`
@@ -132,8 +196,9 @@ const Nav = styled.nav`
 const NavLink = styled(PartlyActiveLink)`
   font-weight: 600;
   font-size: 1.1rem;
-  color: ${theme.colors.black};
-  transition: color 0.15s ease-in-out;
+  color: ${({ isHomePage, insideVideo }) =>
+    isHomePage && insideVideo ? theme.colors.white : theme.colors.black};
+  transition: color 0.25s ease-in-out;
   &:hover {
     text-decoration: none;
   }

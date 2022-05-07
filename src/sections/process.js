@@ -67,9 +67,14 @@ export default () => (
 
 const Process = styled.div`
   position: relative;
-  padding-top: 16vw;
-  @media (min-width: ${theme.breakpoints.xl}) {
-    padding-top: 16rem;
+  padding-top: 90.5vw;
+
+  @media (min-width: ${theme.breakpoints.s}) {
+    padding-top: 70.5vw;
+  }
+
+  @media (min-width: ${theme.breakpoints.xxl}) {
+    padding-top: 70.5rem;
   }
 `
 
@@ -79,9 +84,7 @@ const Steps = styled.div`
   align-items: center;
   width: 100%;
   gap: 3.5rem;
-  /* > * + * {
-    margin-top: 2.5rem;
-  } */
+
   @media (min-width: ${theme.breakpoints.m}) {
     flex-direction: row;
     justify-content: space-between;

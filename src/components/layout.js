@@ -3,18 +3,18 @@ import styled, { ThemeProvider } from "styled-components"
 import theme from "../styles/theme"
 import Header from "./header"
 import Footer from "./footer"
+import HeroVideo from "./hero-video"
 
-export default ({ children }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Wrapper>
-        <Header />
-        <main>{children}</main>
-      </Wrapper>
-      <Footer />
-    </ThemeProvider>
-  )
-}
+export default ({ children, isHomePage }) => (
+  <ThemeProvider theme={theme}>
+    {isHomePage && <HeroVideo />}
+    <Header isHomePage={isHomePage} />
+    <Wrapper>
+      <main>{children}</main>
+    </Wrapper>
+    <Footer />
+  </ThemeProvider>
+)
 
 const Wrapper = styled.div`
   margin: 0 auto;
