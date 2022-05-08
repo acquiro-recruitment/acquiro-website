@@ -67,14 +67,10 @@ export default () => (
 
 const Process = styled.div`
   position: relative;
-  padding-top: 90.5vw;
+  padding-top: 86vw;
 
   @media (min-width: ${theme.breakpoints.s}) {
-    padding-top: 70.5vw;
-  }
-
-  @media (min-width: ${theme.breakpoints.xxl}) {
-    padding-top: 70.5rem;
+    padding-top: calc(100vh + 12rem);
   }
 `
 
