@@ -9,8 +9,9 @@ export default () => {
 
   const handlePlay = () => {
     playBtnRef.current.style.display = "none"
-    videoRef.current.play()
-    videoRef.current.muted = !videoRef.current.muted
+    // videoRef.current.play()
+    // videoRef.current.muted = !videoRef.current.muted
+    videoRef.current.muted = false
     videoRef.current.controls = true
   }
 
@@ -26,7 +27,7 @@ export default () => {
             <path d="M45 90C20.2 90 0 69.8 0 45S20.2 0 45 0s45 20.2 45 45-20.2 45-45 45zm0-84.4C23.3 5.6 5.6 23.3 5.6 45S23.3 84.4 45 84.4 84.4 66.7 84.4 45 66.7 5.6 45 5.6zm15.8 37.8L40 26.7c-1.4-1.1-3.4-.1-3.4 1.6v33.3c0 1.8 2 2.7 3.4 1.6l20.8-16.6c1.1-.8 1.1-2.4 0-3.2z"></path>
           </svg>
         </PlayButton>
-        <video src={Video} ref={videoRef} playsinline loop autoPlay muted />
+        <video src={Video} ref={videoRef} loop autoPlay muted playsInline />
       </VideoContainer>
     </Hero>
   )
