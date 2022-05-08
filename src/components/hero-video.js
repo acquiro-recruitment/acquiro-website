@@ -64,7 +64,7 @@ const PlayButton = styled.button`
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  width: 5rem;
+  width: 4rem;
   transform: translateX(-50%);
   border: none;
   outline: none;
@@ -76,7 +76,8 @@ const PlayButton = styled.button`
     outline: none;
   }
 
-  @media (min-width: ${theme.breakpoints.m}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     bottom: 4rem;
+    width: 5rem;
   }
 `

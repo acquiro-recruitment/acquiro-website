@@ -67,7 +67,7 @@ export default () => (
 
 const Process = styled.div`
   position: relative;
-  padding-top: 86vw;
+  padding-top: 74vw;
 
   @media (min-width: ${theme.breakpoints.s}) {
     padding-top: calc(100vh + 12rem);
@@ -81,7 +81,7 @@ const Steps = styled.div`
   width: 100%;
   gap: 3.5rem;
 
-  @media (min-width: ${theme.breakpoints.m}) {
+  @media (min-width: ${theme.breakpoints.s}) {
     flex-direction: row;
     justify-content: space-between;
   }

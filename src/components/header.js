@@ -148,7 +148,8 @@ const PartlyActiveLink = ({ className, ...rest }) => (
 )
 
 const HeaderWrapper = styled.div`
-  position: ${({ isHomePage }) => (isHomePage ? "fixed" : "relative")};
+  position: ${({ isHomePage }) =>
+    isHomePage && !isMobile ? "fixed" : "relative"};
   width: 100%;
   z-index: 2;
   box-shadow: ${({ isHomePage, insideVideo }) =>
