@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { isMobile } from "react-device-detect"
 import theme from "../styles/theme"
 import LinkedIn from "../icons/linkedin"
 import Instagram from "../icons/instagram"
@@ -148,8 +147,7 @@ const PartlyActiveLink = ({ className, ...rest }) => (
 )
 
 const HeaderWrapper = styled.div`
-  position: ${({ isHomePage }) =>
-    isHomePage && !isMobile ? "fixed" : "relative"};
+  position: relative;
   width: 100%;
   z-index: 2;
   box-shadow: ${({ isHomePage, insideVideo }) =>
@@ -157,6 +155,10 @@ const HeaderWrapper = styled.div`
   background: ${({ isHomePage, insideVideo }) =>
     isHomePage && !insideVideo ? "white" : "transparent"};
   transition: all 0.25s ease-in-out;
+
+  @media (min-width: ${theme.breakpoints.s}) {
+    position: ${({ isHomePage }) => (isHomePage ? "fixed" : "relative")};
+  }
 `
 
 const Header = styled.header`

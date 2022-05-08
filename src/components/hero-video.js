@@ -64,7 +64,7 @@ const PlayButton = styled.button`
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  width: 4rem;
+  width: 4.5rem;
   transform: translateX(-50%);
   border: none;
   outline: none;
