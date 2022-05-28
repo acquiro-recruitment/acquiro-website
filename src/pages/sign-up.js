@@ -36,12 +36,9 @@ const SignUp = () => (
         <Reveal keyframes={fadeIn} delay={200} triggerOnce>
           <Text>
             Whether you're in the early stages of work discovery or urgently
-            looking for new hires, we respond to every inquiry within a few
-            business days.
-            <br />
-            <br />
-            Simply fill out the form with as much context as you're willing to
-            share and we can schedule a phone/video call or meeting.
+            looking for your next position or interim assignment, simply fill
+            out the form with as much context as you're willing to share and we
+            will contact you when we have a matching opportunity.
           </Text>
         </Reveal>
 

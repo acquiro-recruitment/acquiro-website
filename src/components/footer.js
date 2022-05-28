@@ -37,7 +37,7 @@ export default ({ light }) => {
               <Instagram />
             </Icon>
           </Icons>
-          <Copyright>Copyright © Acquiro Recruitment {getYear()}</Copyright>
+          <Copyright>Copyright Acquiro International Recruitment</Copyright>
         </FooterContent>
       </Container>
     </Footer>

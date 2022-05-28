@@ -22,7 +22,9 @@ export default () => {
   const [email, setEmail] = useState("")
   const [objective, setObjective] = useState("")
   const [industry, setIndustry] = useState("")
+  const [other, setOther] = useState("")
   const [expertise, setExpertise] = useState("")
+  const [role, setRole] = useState("")
   const [linkedin, setLinkedIn] = useState("")
   const [resume, setResume] = useState("")
   const [accepted, setAccepted] = useState(false)
@@ -58,7 +60,9 @@ export default () => {
         Email: email,
         Objective: objective,
         Industry: industry,
+        Other: other,
         Function: expertise,
+        Role: role,
         LinkedIn: linkedin,
         Resume: [
           {
@@ -84,7 +88,9 @@ export default () => {
         Email: email,
         Objective: objective,
         Industry: industry,
+        Other: other,
         Function: expertise,
+        Role: role,
         LinkedIn: linkedin,
         Resume: resume,
         TermsAccepted: accepted,
@@ -103,8 +109,7 @@ export default () => {
     fetch("https://api.airtable.com/v0/apphyJYGHPGRxQPNo/submissions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer keyhdGq2bi2i5VpE9`,
-        // Authorization: `Bearer ${process.env.AIRTABLE_API}`,
+        Authorization: `Bearer ${process.env.AIRTABLE_API}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fields),
@@ -133,13 +138,13 @@ export default () => {
   }
 
   return (
-    <Form
-      objective={objective}
-      industry={industry}
-      expertise={expertise}
-      onSubmit={(e) => handleSubmit(e)}
-    >
-      <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+    <Reveal keyframes={fadeIn} delay={600} triggerOnce>
+      <Form
+        objective={objective}
+        industry={industry}
+        expertise={expertise}
+        onSubmit={(e) => handleSubmit(e)}
+      >
         <div>
           <label htmlFor="name">Who are you?</label>
 
@@ -219,6 +224,20 @@ export default () => {
           </select>
         </div>
 
+        {industry === "Other" && (
+          <div>
+            <label htmlFor="name">Please specify:</label>
+
+            <input
+              type="text"
+              name="Other"
+              id="Other"
+              placeholder="Your industry"
+              onChange={(e) => setOther(e.target.value)}
+            />
+          </div>
+        )}
+
         <div>
           <label htmlFor="expertise">What do you do? (optional)</label>
 
@@ -240,6 +259,20 @@ export default () => {
           </select>
         </div>
 
+        {expertise === "Other" && (
+          <div>
+            <label htmlFor="name">Please specify:</label>
+
+            <input
+              type="text"
+              name="Role"
+              id="Role"
+              placeholder="Your role"
+              onChange={(e) => setRole(e.target.value)}
+            />
+          </div>
+        )}
+
         <div>
           <label htmlFor="linkedin">LinkedIn profile (optional)</label>
 
@@ -257,7 +290,7 @@ export default () => {
           <label htmlFor="linkedin">Upload your CV (optional)</label>
           <input
             type="file"
-            // accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
             onChange={(e) => setResume(e.target.files[0])}
           />
         </div>
@@ -311,12 +344,13 @@ export default () => {
           {error && (
             <ErrorMessage>
               There was an unexpected error.
-              <br /> Please try again or send us an email.
+              <br /> Please try again or send us an{" "}
+              <Link to="/contact">email.</Link>
             </ErrorMessage>
           )}
         </div>
-      </Reveal>
-    </Form>
+      </Form>
+    </Reveal>
   )
 }
 
@@ -342,6 +376,7 @@ const ErrorMessage = styled.div`
   font-weight: 500;
   margin-top: 0.5rem;
   color: #ce0e0e;
+  text-align: center;
 `
 
 const Form = styled.form(

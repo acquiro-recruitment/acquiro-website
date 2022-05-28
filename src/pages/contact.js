@@ -72,7 +72,7 @@ const Contact = () => {
               </Image>
               <Text>
                 <span>Elias Danger</span>
-                Recruitment Consultant
+                Recruitment Consultant / Head of Denmark
                 <br />
                 <a href="mailto:elias.danger@acquirorecruitment.com">
                   elias.danger@acquirorecruitment.com
@@ -129,7 +129,7 @@ const Contact = () => {
 
               <div>
                 <InfoHeading>Telephone</InfoHeading>
-                <InfoText>+46 (0) 707 13 15 23</InfoText>
+                <InfoText>+46 (0) 10-202 20 32</InfoText>
               </div>
 
               <div>

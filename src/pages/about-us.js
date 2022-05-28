@@ -25,8 +25,8 @@ const fadeIn = keyframes`
 
 const About = () => {
   const recruitments = useSpring({
-    val: 250,
-    from: { val: 60 },
+    val: 750,
+    from: { val: 600 },
     delay: 600,
     config: { tension: 50, friction: 10 },
   })
@@ -47,33 +47,33 @@ const About = () => {
             <Reveal keyframes={fadeIn} triggerOnce cascade duration={600}>
               <p>
                 Acquiro is a digital recruitment agency focusing on
-                international specialists and tech recruitment. We have 10
+                international specialist- and tech recruitment. We have over 10
                 years' experience of international recruitment for global
                 Scandinavian companies from almost all parts of the world.
               </p>
+              <p>We offer:</p>
+              <List>
+                <li>
+                  International recruitment of tech professionals, managers,
+                  engineers and specialists for positions in Scandinavia or
+                  remote
+                </li>
+                <li>Support with international relocation through partners</li>
+                <li>
+                  Interim solutions within recruitment / talent acquisition
+                </li>
+              </List>
               <p>
-                When we recruit a great candidate for a key position it is the
-                starting point of a chain reaction. The company and the
-                customers will profit. The team and the people close to them
-                will prosper. Eventually the business will grow and new bridges
-                will be built.
+                <Link to="/contact">Contact us</Link> for more information on
+                our offers. We respond to all inquiries within 24 hours.
               </p>
               <p>
-                When you create a diverse team, no matter how big or small,
-                bridges are built between people and perceptions. And bridges
-                create new opportunities. And new opportunities create growth.
+                If you are a candidate in search for a new position or an
+                interim assignment, <Link to="/sign-up">sign up</Link> to join
+                our international talent network today.
               </p>
             </Reveal>
           </Text>
-
-          <Reveal keyframes={fadeIn} delay={600} triggerOnce>
-            <Button dark href="/sign-up">
-              Sign up now
-            </Button>
-            <ContactLink>
-              Or visit our <Link to="/contact">contact page.</Link>
-            </ContactLink>
-          </Reveal>
         </Info>
 
         <NumbersWrapper>
@@ -119,7 +119,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  margin: 2.5rem auto 8rem;
+  margin: 2.5rem auto;
   @media (min-width: ${theme.breakpoints.m}) {
     flex-direction: row;
   }
@@ -202,9 +202,10 @@ const Text = styled.p`
   font-size: 1.25rem;
 `
 
-const ContactLink = styled.div`
-  margin-top: 3.25rem;
-  font-size: 1.25rem;
+const List = styled.ul`
+  margin-bottom: 3.25rem;
+  padding-left: 2rem;
+  font-size: 1.2rem;
 `
 
 export default About

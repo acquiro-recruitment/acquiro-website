@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import theme from "../styles/theme"
 import styled from "styled-components"
-import Video from "../video/acquiro_large_compressed.mp4"
+import Video from "../video/acquiro_1080.mp4"
 
 export default () => {
   const playBtnRef = useRef()
@@ -9,8 +9,6 @@ export default () => {
 
   const handlePlay = () => {
     playBtnRef.current.style.display = "none"
-    // videoRef.current.play()
-    // videoRef.current.muted = !videoRef.current.muted
     videoRef.current.muted = false
     videoRef.current.controls = true
   }

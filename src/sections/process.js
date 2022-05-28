@@ -29,9 +29,9 @@ export default () => (
           </StepIcon>
           <StepHeading>Recruitment</StepHeading>
           <Text>
-            Are you looking for work or need new hires for your company?
-            <br />
-            We can help you either way.
+            We recruit Managers and technical specialists globally for placement
+            in Scandinavia or remote. We also offer interim solutions within
+            recruitment and talent acquisition.
           </Text>
         </Step>
       </Reveal>
@@ -43,8 +43,10 @@ export default () => (
           </StepIcon>
           <StepHeading>Relocation</StepHeading>
           <Text>
-            We will give you all the support you need to successfully relocate
-            to your country of choice.
+            Moving to a new country is a big deal and the process raises many
+            questions. We support all our clients and candidates with
+            information and advice during the whole process. We also help with
+            all practical aspects through partners.
           </Text>
         </Step>
       </Reveal>
@@ -56,8 +58,10 @@ export default () => (
           </StepIcon>
           <StepHeading>Adaptation</StepHeading>
           <Text>
-            We do follow-ups 6 and 12 months after each placement to make sure
-            that everything is going well.
+            Our commitment does not end when we place a candidate. We do
+            follow-ups 6 and 12 months after each recruitment to make sure that
+            everything is going well. We also have a one year guarantee on all
+            our recruitments.
           </Text>
         </Step>
       </Reveal>
@@ -90,7 +94,6 @@ const Steps = styled.div`
 const Step = styled.div`
   display: flex;
   flex-direction: column;
-  width: 18.75rem;
   text-align: center;
 `
 
@@ -119,5 +122,5 @@ const StepHeading = styled.h4`
 
 const Text = styled.p`
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 `
