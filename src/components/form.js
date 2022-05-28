@@ -109,7 +109,7 @@ export default () => {
     fetch("https://api.airtable.com/v0/apphyJYGHPGRxQPNo/submissions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${process.env.AIRTABLE_API}`,
+        Authorization: `Bearer keyhdGq2bi2i5VpE9`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fields),
