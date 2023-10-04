@@ -22,6 +22,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
