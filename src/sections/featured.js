@@ -80,7 +80,7 @@ const Wrapper = styled.div`
   margin-bottom: 6rem;
   padding-top: 4rem;
   @media (min-width: ${({ theme }) => theme.breakpoints.s}) {
-    padding-top: 14rem;
+    padding-top: 8rem;
     margin-bottom: 8rem;
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.xl}) {

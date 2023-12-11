@@ -20,58 +20,13 @@ const fadeIn = keyframes`
 export default () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [objective, setObjective] = useState("")
+  const [company, setCompany] = useState("")
   const [expertise, setExpertise] = useState("")
   const [role, setRole] = useState("")
-  const [linkedin, setLinkedIn] = useState("")
-  const [resume, setResume] = useState("")
   const [accepted, setAccepted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const [submitted, setSubmitted] = useState(false)
-
-  const uploadResume = (e) => {
-    const data = new FormData()
-    data.append("file", resume)
-    data.append("upload_preset", "resumes")
-    data.append("cloud_name", "acquiro")
-    fetch(" https://api.cloudinary.com/v1_1/acquiro/image/upload", {
-      method: "post",
-      body: data,
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        submitWithResume(e, data.url)
-      })
-      .catch((error) => {
-        alert(error?.message)
-        console.log(error)
-        setLoading(false)
-        setError(true)
-      })
-  }
-
-  const submitWithResume = (e, url) => {
-    const fields = {
-      fields: {
-        Name: name,
-        Email: email,
-        Objective: objective,
-        Function: expertise,
-        Role: role,
-        LinkedIn: linkedin,
-        Resume: [
-          {
-            url,
-          },
-        ],
-        TermsAccepted: accepted,
-        Created: new Date(),
-      },
-    }
-
-    postToAirtable(e, fields)
-  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -82,25 +37,19 @@ export default () => {
       fields: {
         Name: name,
         Email: email,
-        Objective: objective,
+        Company: company,
         Function: expertise,
-        Role: role,
-        LinkedIn: linkedin,
-        Resume: resume,
+        Other: role,
         TermsAccepted: accepted,
         Created: new Date(),
       },
     }
 
-    if (resume) {
-      uploadResume(e)
-    } else {
-      postToAirtable(e, fields)
-    }
+    postToAirtable(e, fields)
   }
 
   const postToAirtable = (e, fields) => {
-    fetch("https://api.airtable.com/v0/apphyJYGHPGRxQPNo/submissions", {
+    fetch("https://api.airtable.com/v0/apphyJYGHPGRxQPNo/requests", {
       method: "POST",
       headers: {
         Authorization: `Bearer keyhdGq2bi2i5VpE9`,
@@ -113,7 +62,6 @@ export default () => {
           setLoading(false)
           setSubmitted(true)
           setError(false)
-          setObjective("")
           setExpertise("")
           e.target.reset()
         } else {
@@ -131,11 +79,7 @@ export default () => {
 
   return (
     <Reveal keyframes={fadeIn} delay={600} triggerOnce>
-      <Form
-        objective={objective}
-        expertise={expertise}
-        onSubmit={(e) => handleSubmit(e)}
-      >
+      <Form expertise={expertise} onSubmit={(e) => handleSubmit(e)}>
         <div>
           <label htmlFor="name">Who are you?</label>
 
@@ -146,6 +90,20 @@ export default () => {
             placeholder="Name"
             required
             onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="company">Where do you work?</label>
+
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company or organization"
+            autoComplete="off"
+            required
+            onChange={(e) => setCompany(e.target.value)}
           />
         </div>
 
@@ -163,29 +121,15 @@ export default () => {
         </div>
 
         <div>
-          <label htmlFor="objective">What are you looking for?</label>
-
-          <select
-            name="objective"
-            id="objective"
-            required
-            onChange={(e) => setObjective(e.target.value)}
-          >
-            <option value="">Select from the menu</option>
-            <option value="Looking for work">I'm looking for work</option>
-            <option value="Interim">I'm looking for interim assignments</option>
-            <option value="Just Saying Hi!">Just saying hi!</option>
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="expertise">What do you do? (optional)</label>
+          <label htmlFor="expertise">
+            Which area are you looking for consultants in?
+          </label>
           <select
             name="expertise"
             id="expertise"
             onChange={(e) => setExpertise(e.target.value)}
           >
-            <option value="">Select your area of expertise</option>
+            <option value="">Select area of expertise</option>
             <option value="HR/Recruitment">HR/Recruitment</option>
             <option value="Tech/Engineering">Tech/Engineering</option>
             <option value="Other">Other</option>
@@ -200,33 +144,11 @@ export default () => {
               type="text"
               name="Role"
               id="Role"
-              placeholder="Your role"
+              placeholder="Area of expertise"
               onChange={(e) => setRole(e.target.value)}
             />
           </div>
         )}
-
-        <div>
-          <label htmlFor="linkedin">LinkedIn profile (optional)</label>
-
-          <input
-            type="text"
-            name="linkedin"
-            id="linkedin"
-            placeholder="Link to profile address"
-            autoComplete="off"
-            onChange={(e) => setLinkedIn(e.target.value)}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="linkedin">Upload your CV (optional)</label>
-          <input
-            type="file"
-            accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            onChange={(e) => setResume(e.target.files[0])}
-          />
-        </div>
 
         <div>
           <input
@@ -313,7 +235,7 @@ const ErrorMessage = styled.div`
 `
 
 const Form = styled.form(
-  ({ objective, industry, expertise }) => css`
+  ({ expertise }) => css`
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -392,12 +314,6 @@ const Form = styled.form(
       @media (min-width: ${theme.breakpoints.s}) {
         font-size: 1.25rem;
       }
-    }
-    select[name="objective"] {
-      ${objective && selectedStyles};
-    }
-    select[name="industry"] {
-      ${industry && selectedStyles};
     }
     select[name="expertise"] {
       ${expertise && selectedStyles};

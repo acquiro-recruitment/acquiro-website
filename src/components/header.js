@@ -57,6 +57,14 @@ export default ({ isHomePage }) => {
             isHomePage={isHomePage}
             insideVideo={insideVideo}
             activeClassName="active"
+            to="/find-consultants"
+          >
+            Find consultants
+          </NavLink>
+          <NavLink
+            isHomePage={isHomePage}
+            insideVideo={insideVideo}
+            activeClassName="active"
             to="/blog"
           >
             Blog

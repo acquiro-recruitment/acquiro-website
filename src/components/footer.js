@@ -6,8 +6,6 @@ import LinkedIn from "../icons/linkedin"
 import Instagram from "../icons/instagram"
 
 export default ({ light }) => {
-  const getYear = () => new Date().getFullYear()
-
   return (
     <Footer light={light}>
       <Container>
@@ -37,7 +35,9 @@ export default ({ light }) => {
               <Instagram />
             </Icon>
           </Icons>
-          <Copyright>Copyright Acquiro International Recruitment</Copyright>
+          <Copyright>
+            © {new Date().getFullYear()} Acquiro International Recruitment
+          </Copyright>
         </FooterContent>
       </Container>
     </Footer>

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/layout"
-import Form from "../components/form"
+import Form from "../components/form-consultants"
 import theme from "../styles/theme"
 import Globe from "../images/globe.svg"
 
@@ -20,24 +20,23 @@ const fadeIn = keyframes`
   }
 `
 
-const SignUp = () => (
+const FindConsultants = () => (
   <Layout>
-    {/* <Seo title="All posts" /> */}
     <Wrapper>
       <Info>
         <Reveal keyframes={fadeIn} triggerOnce>
-          <Heading>
-            We would love to
-            <br /> hear from you.
-          </Heading>
+          <Heading>Hire industry-leading interim consultants</Heading>
         </Reveal>
 
         <Reveal keyframes={fadeIn} delay={200} triggerOnce>
           <Text>
-            Whether you're in the early stages of work discovery or urgently
-            looking for your next position or interim assignment, simply fill
-            out the form with as much context as you're willing to share and we
-            will contact you when we have a matching opportunity.
+            From tech professionals to exceptional managers and recruitment
+            specialists, our talent pool brims with dedicated experts keen on
+            driving your projects forward. Start your journey today and unlock
+            the potential of Acquiro's interim consultant network by filling out
+            the form, it’s completely free of charge and only takes a couple of
+            minutes. We will get in contact with you when we have a matching
+            consultant, precisely picked to meet and exceed your expectations.
           </Text>
         </Reveal>
 
@@ -118,4 +117,4 @@ const StyledGlobe = styled(Globe)`
   border-radius: 50%;
 `
 
-export default SignUp
+export default FindConsultants
