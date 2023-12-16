@@ -101,6 +101,7 @@ const Steps = styled.div`
   gap: 3.5rem;
 
   @media (min-width: ${theme.breakpoints.s}) {
+    align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
     scroll-margin-top: 20ex;

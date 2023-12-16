@@ -61,7 +61,7 @@ const Wrapper = styled.main`
   @media (min-width: ${theme.breakpoints.s}) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 8rem;
+    margin-bottom: 24rem;
   }
 `
 
