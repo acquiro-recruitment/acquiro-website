@@ -43,11 +43,11 @@ const Contact = () => {
           <Reveal keyframes={fadeIn} delay={400} triggerOnce>
             <Headshot>
               <Image>
-                <StaticImage src="../images/lina.jpeg" alt="lina" />
+                <StaticImage src="../images/lina.jpg" alt="lina" />
               </Image>
               <Text>
                 <span>Lina Sahlberg</span>
-                Managing Partner
+                Managing Partner / Recruitment Consultant
                 <br />
                 <a href="mailto:lina.sahlberg@acquirorecruitment.com">
                   lina.sahlberg@acquirorecruitment.com
@@ -68,11 +68,11 @@ const Contact = () => {
           <Reveal keyframes={fadeIn} delay={600} triggerOnce>
             <Headshot>
               <Image>
-                <StaticImage src="../images/elias.png" alt="elias" />
+                <StaticImage src="../images/elias.jpg" alt="elias" />
               </Image>
               <Text>
                 <span>Elias Danger</span>
-                Recruitment Consultant / Head of Denmark
+                Partner / Recruitment Consultant
                 <br />
                 <a href="mailto:elias.danger@acquirorecruitment.com">
                   elias.danger@acquirorecruitment.com
@@ -82,6 +82,31 @@ const Contact = () => {
                 <br />
                 <LinkedInProfile
                   href="https://www.linkedin.com/in/elias-danger-9312a41b9/"
+                  target="_blank"
+                >
+                  <LinkedInProfileLogo />
+                </LinkedInProfile>
+              </Text>
+            </Headshot>
+          </Reveal>
+
+          <Reveal keyframes={fadeIn} delay={800} triggerOnce>
+            <Headshot>
+              <Image>
+                <StaticImage src="../images/johan.jpg" alt="johan" />
+              </Image>
+              <Text>
+                <span>Johan Ek</span>
+                Junior Recruitment Consultant
+                <br />
+                <a href="mailto:johan.ek@acquirorecruitment.com">
+                  johan.ek@acquirorecruitment.com
+                </a>
+                <br />
+                +46 (0) 768 63 35 88
+                <br />
+                <LinkedInProfile
+                  href="https://www.linkedin.com/in/johan-ek-03ab62174/"
                   target="_blank"
                 >
                   <LinkedInProfileLogo />
@@ -195,9 +220,12 @@ const Headshots = styled.div`
   > * + * {
     margin-top: 3.5rem;
   }
+  > * {
+    width: 100%;
+  }
   @media (min-width: ${theme.breakpoints.m}) {
-    margin: 5rem 0;
     flex-direction: row;
+    gap: 2rem;
     > * + * {
       margin-top: 0;
     }
@@ -209,14 +237,10 @@ const Headshot = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  @media (min-width: ${theme.breakpoints.s}) {
-    flex-direction: row;
-    text-align: left;
-  }
 `
 
 const Image = styled.div`
-  width: 8.75rem;
+  width: 12rem;
   border-radius: 50%;
   border: 0.25rem solid ${theme.colors.primary};
   overflow: hidden;
@@ -224,30 +248,34 @@ const Image = styled.div`
   -moz-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
-
-  @media (min-width: ${theme.breakpoints.s}) {
-    margin-right: 2rem;
-  }
 `
 
 const Text = styled.p`
-  margin: 0;
+  margin: 1rem 0 0 0;
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.75;
   a {
     color: ${theme.colors.text};
+    &:hover {
+      text-decoration: underline;
+    }
   }
   span {
+    margin-bottom: 0.15rem;
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
+  }
+
+  @media (min-width: ${theme.breakpoints.m}) {
+    margin: 1.15rem 0 0 0;
   }
 `
 
 const LinkedInProfile = styled.a`
   svg {
-    margin-top: 0.35rem;
+    margin-top: 0.75rem;
     width: 5rem;
   }
 `
